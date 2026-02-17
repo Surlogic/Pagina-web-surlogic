@@ -1,0 +1,572 @@
+{
+  "nav": {
+    "services": "Serviços",
+    "caseStudies": "Casos de Sucesso",
+    "about": "Sobre Nós",
+    "contact": "Contato"
+  },
+  "hero": {
+    "title": "Transformamos operações empresariais em vantagens competitivas",
+    "subtitle": "Projetamos e implementamos sistemas empresariais, automações inteligentes e integrações complexas que reduzem custos operacionais em até 70% e aceleram o crescimento de médias e grandes empresas.",
+    "cta": "Agendar Consultoria Gratuita",
+    "ctaSecondary": "Ver Casos de Sucesso",
+    "metric1": "+50",
+    "metric1Label": "Projetos Entregues",
+    "metric2": "70%",
+    "metric2Label": "Redução de Custos",
+    "metric3": "+12",
+    "metric3Label": "Anos de Experiência",
+    "metric4": "98%",
+    "metric4Label": "Retenção de Clientes"
+  },
+  "problems": {
+    "title": "Desafios que resolvemos todos os dias",
+    "subtitle": "Entendemos os problemas reais porque já os resolvemos dezenas de vezes em setores como logística, manufatura, varejo e serviços financeiros.",
+    "item1": {
+      "title": "Sistemas Legacy que Freiam o Crescimento",
+      "description": "Migramos infraestrutura desatualizada para arquiteturas modernas sem interromper operações. Sem downtime, sem risco."
+    },
+    "item2": {
+      "title": "Processos Manuais que Custam Milhares por Mês",
+      "description": "Automatizamos fluxos de trabalho repetitivos, reduzindo erros em até 90% e liberando sua equipe para tarefas estratégicas."
+    },
+    "item3": {
+      "title": "Sistemas Desconectados e Dados Inconsistentes",
+      "description": "Conectamos ERPs, CRMs e APIs de terceiros, garantindo uma única fonte de verdade e sincronização em tempo real."
+    },
+    "item4": {
+      "title": "Infraestrutura que Não Escala com o Negócio",
+      "description": "Projetamos arquiteturas cloud-native preparadas para crescimento exponencial sem reescrita de código."
+    }
+  },
+  "services": {
+    "title": "Serviços Estratégicos",
+    "subtitle": "Cada serviço é projetado para gerar impacto mensurável em suas operações",
+    "custom": {
+      "title": "Software Sob Medida",
+      "description": "Sistemas empresariais projetados especificamente para seus processos únicos. Sem as limitações de soluções genéricas.",
+      "link": "Explorar Serviço"
+    },
+    "automation": {
+      "title": "Automação Empresarial",
+      "description": "Eliminamos tarefas manuais por meio de fluxos inteligentes que reduzem custos operacionais em até 75%.",
+      "link": "Explorar Serviço"
+    },
+    "integrations": {
+      "title": "Integrações Complexas",
+      "description": "Conectamos ecossistemas heterogêneos, assegurando sincronização de dados consistente em tempo real.",
+      "link": "Explorar Serviço"
+    },
+    "applications": {
+      "title": "Aplicações Empresariais",
+      "description": "Plataformas web e móveis robustas orientadas à produtividade, desempenho e experiência do usuário.",
+      "link": "Explorar Serviço"
+    }
+  },
+  "methodology": {
+    "title": "Como Trabalhamos",
+    "subtitle": "Um processo comprovado em +50 projetos que garante entregas previsíveis e resultados mensuráveis",
+    "step1": {
+      "title": "Discovery & Estratégia",
+      "description": "Imersão em suas operações, mapeamento de processos, identificação de gargalos e definição de objetivos mensuráveis com KPIs claros."
+    },
+    "step2": {
+      "title": "Arquitetura & Design",
+      "description": "Definição do stack tecnológico ideal, padrões de design e estrutura modular escalável. Prototipagem e validação."
+    },
+    "step3": {
+      "title": "Desenvolvimento Iterativo",
+      "description": "Sprints de 2 semanas com entregas funcionais, demos para a equipe, validação constante e ajustes em tempo real."
+    },
+    "step4": {
+      "title": "Deploy & Evolução",
+      "description": "Migração sem downtime, capacitação de usuários, monitoramento proativo e suporte contínuo pós-implementação."
+    }
+  },
+  "trust": {
+    "title": "Tecnologias que Dominamos",
+    "subtitle": "Selecionamos o stack ideal para cada projeto"
+  },
+  "testimonials": {
+    "badge": "Depoimentos",
+    "title": "O que dizem nossos clientes",
+    "subtitle": "Empresas que confiaram em nós para transformar suas operações",
+    "item1": {
+      "content": "A automação que implementaram reduziu nossos tempos de processamento em 70%. A equipe entendeu perfeitamente nossas necessidades desde o primeiro dia.",
+      "name": "María González",
+      "position": "Diretora de Operações",
+      "company": "Empresa Logística Regional"
+    },
+    "item2": {
+      "content": "Profissionais excepcionais. A integração com nossos sistemas foi impecável. Agora temos visibilidade completa em tempo real de toda a cadeia.",
+      "name": "Carlos Martínez",
+      "position": "CTO",
+      "company": "Rede de Varejo"
+    },
+    "item3": {
+      "content": "Superaram expectativas. O software sob medida se adaptou perfeitamente aos nossos processos complexos. Suporte técnico de primeira qualidade.",
+      "name": "Ana Silva",
+      "position": "Gerente de TI",
+      "company": "Empresa Manufatureira"
+    }
+  },
+  "cta": {
+    "title": "Pronto para transformar suas operações?",
+    "subtitle": "Agende uma consultoria gratuita de 30 minutos. Analisamos sua situação atual e propomos um plano de ação concreto.",
+    "button": "Agendar Consultoria Gratuita",
+    "note": "Sem compromisso · Resposta em menos de 24h"
+  },
+  "footer": {
+    "description": "Parceiro tecnológico para empresas que necessitam de soluções críticas de alto impacto. Mais de uma década transformando operações empresariais na América Latina.",
+    "services": "Serviços",
+    "company": "Empresa",
+    "customSoftware": "Software Sob Medida",
+    "automations": "Automação",
+    "integrations": "Integrações",
+    "applications": "Aplicações",
+    "aboutUs": "Sobre Nós",
+    "caseStudies": "Casos de Sucesso",
+    "contactLink": "Contato",
+    "legal": "Legal",
+    "privacy": "Política de Privacidade",
+    "terms": "Termos de Serviço",
+    "rights": "Todos os direitos reservados",
+    "location": "Montevideo, Uruguay"
+  },
+  "customSoftware": {
+    "hero": {
+      "title": "Software Empresarial Sob Medida",
+      "subtitle": "Desenvolvemos sistemas específicos que se adaptam exatamente aos seus processos de negócio únicos, sem as limitações de soluções genéricas."
+    },
+    "benefits": {
+      "title": "Vantagens Competitivas",
+      "item1": {
+        "title": "Personalização Total",
+        "description": "Cada funcionalidade projetada conforme seus requisitos exatos, não o contrário"
+      },
+      "item2": {
+        "title": "Integração Nativa",
+        "description": "Conexão direta com seus sistemas atuais sem middleware desnecessário"
+      },
+      "item3": {
+        "title": "Propriedade do Código",
+        "description": "Controle absoluto do ativo digital sem dependência de fornecedores"
+      },
+      "item4": {
+        "title": "Escalabilidade Planejada",
+        "description": "Arquitetura preparada para crescimento futuro desde o projeto inicial"
+      }
+    },
+    "approach": {
+      "title": "Nossa Abordagem",
+      "subtitle": "Metodologia comprovada para entrega de sistemas críticos",
+      "discovery": {
+        "title": "Discovery Profundo",
+        "description": "Imersão em suas operações atuais, identificação de gargalos e definição de objetivos mensuráveis"
+      },
+      "architecture": {
+        "title": "Design de Arquitetura",
+        "description": "Definição de stack tecnológico, padrões de design e estrutura modular escalável"
+      },
+      "development": {
+        "title": "Implementação Iterativa",
+        "description": "Sprints com entregas funcionais, validação constante e ajustes em tempo real"
+      },
+      "delivery": {
+        "title": "Deploy Controlado",
+        "description": "Migração sem downtime, capacitação de usuários e documentação técnica completa"
+      }
+    },
+    "useCases": {
+      "title": "Casos de Aplicação",
+      "erp": "ERPs Verticais Específicos",
+      "crm": "CRMs Personalizados",
+      "inventory": "Gestão de Estoque Avançada",
+      "workflow": "Plataformas de Workflow",
+      "analytics": "Dashboards Analíticos",
+      "compliance": "Sistemas de Compliance"
+    },
+    "cta": {
+      "title": "Precisa de um sistema que se adapte ao seu negócio?",
+      "subtitle": "Vamos conversar sobre seus requisitos específicos e como podemos ajudá-lo.",
+      "button": "Solicitar Consultoria"
+    }
+  },
+  "automation": {
+    "hero": {
+      "title": "Automação que Libera Recursos Estratégicos",
+      "subtitle": "Eliminamos processos manuais repetitivos por meio de fluxos de trabalho inteligentes que reduzem erros, aceleram operações e permitem foco em tarefas de alto valor."
+    },
+    "impact": {
+      "title": "Impacto Operacional Comprovado",
+      "metric1": {
+        "value": "75%",
+        "label": "Redução de tempo em processos"
+      },
+      "metric2": {
+        "value": "90%",
+        "label": "Diminuição de erros manuais"
+      },
+      "metric3": {
+        "value": "6-12",
+        "label": "Meses para alcançar ROI"
+      }
+    },
+    "automations": {
+      "title": "Automações que Implementamos",
+      "invoicing": {
+        "title": "Faturamento Automático",
+        "description": "Geração, envio e acompanhamento de faturas a partir de ordens de compra"
+      },
+      "reporting": {
+        "title": "Relatórios Programados",
+        "description": "Extração, processamento e distribuição de relatórios executivos"
+      },
+      "inventory": {
+        "title": "Gestão de Estoque",
+        "description": "Sincronização de estoque entre múltiplos canais e reabastecimento preditivo"
+      },
+      "notifications": {
+        "title": "Notificações Contextuais",
+        "description": "Alertas inteligentes baseados em eventos de negócio e limites configuráveis"
+      },
+      "dataEntry": {
+        "title": "Entrada de Dados",
+        "description": "Captura automática a partir de e-mails, PDFs, formulários e fontes externas"
+      },
+      "compliance": {
+        "title": "Conformidade Regulatória",
+        "description": "Validações automáticas e geração de documentação regulatória"
+      }
+    },
+    "process": {
+      "title": "Processo de Implementação",
+      "subtitle": "Metodologia comprovada para automação eficaz",
+      "audit": {
+        "title": "Auditoria de Processos",
+        "description": "Identificação de fluxos manuais e cálculo do potencial de otimização"
+      },
+      "design": {
+        "title": "Design de Fluxo",
+        "description": "Mapeamento de automação, exceções e pontos de validação humana"
+      },
+      "build": {
+        "title": "Desenvolvimento e Integração",
+        "description": "Construção da automação e conexão com sistemas existentes"
+      },
+      "monitoring": {
+        "title": "Monitoramento Contínuo",
+        "description": "Acompanhamento de execução, alertas de falhas e otimização progressiva"
+      }
+    },
+    "cta": {
+      "title": "Quanto vocês poderiam economizar automatizando?",
+      "subtitle": "Fazemos uma auditoria gratuita dos seus processos e calculamos o potencial de economia.",
+      "button": "Solicitar Auditoria Gratuita"
+    }
+  },
+  "integrations": {
+    "hero": {
+      "title": "Integrações que Unificam Ecossistemas",
+      "subtitle": "Conectamos sistemas distintos em uma arquitetura coerente que garante fluxo de dados consistente, elimina silos de informação e habilita visibilidade operacional completa."
+    },
+    "challenges": {
+      "title": "Desafios que Resolvemos",
+      "item1": {
+        "title": "Dados Duplicados e Inconsistentes",
+        "description": "Sincronização bidirecional que mantém uma única fonte de verdade"
+      },
+      "item2": {
+        "title": "Transferências Manuais",
+        "description": "Eliminação de exportações/importações por meio de conexões API diretas"
+      },
+      "item3": {
+        "title": "Visibilidade Fragmentada",
+        "description": "Consolidação de dados de múltiplas fontes em dashboards unificados"
+      },
+      "item4": {
+        "title": "Escalabilidade de Integrações",
+        "description": "Arquitetura de integração extensível preparada para novos sistemas"
+      }
+    },
+    "platforms": {
+      "title": "Plataformas e APIs",
+      "subtitle": "Experiência comprovada em ecossistemas empresariais",
+      "erp": "SAP, Oracle, Microsoft Dynamics",
+      "crm": "Salesforce, HubSpot, Zoho",
+      "ecommerce": "Shopify, Magento, WooCommerce",
+      "payment": "Stripe, PayPal, Mercado Pago, dLocal",
+      "logistics": "FedEx, UPS, DHL APIs",
+      "accounting": "QuickBooks, Xero, Contabilium, Zeta"
+    },
+    "architecture": {
+      "title": "Arquitetura de Integração",
+      "rest": {
+        "title": "REST APIs",
+        "description": "Integrações síncronas com validação em tempo real"
+      },
+      "webhooks": {
+        "title": "Webhooks",
+        "description": "Eventos push para atualizações instantâneas"
+      },
+      "queues": {
+        "title": "Message Queues",
+        "description": "Processamento assíncrono de alto volume"
+      },
+      "etl": {
+        "title": "ETL Pipelines",
+        "description": "Transformação e carga de dados batch programados"
+      }
+    },
+    "approach": {
+      "title": "Nossa Abordagem",
+      "subtitle": "Metodologia comprovada para integrações críticas",
+      "step1": {
+        "title": "Análise de Ecossistema",
+        "description": "Avaliamos sua infraestrutura atual, APIs disponíveis e fluxos de dados necessários"
+      },
+      "step2": {
+        "title": "Design de Arquitetura",
+        "description": "Definimos padrões de integração, protocolos e estratégias de sincronização"
+      },
+      "step3": {
+        "title": "Implementação Incremental",
+        "description": "Conectamos sistemas de forma progressiva com validação em cada etapa"
+      },
+      "step4": {
+        "title": "Monitoramento e Otimização",
+        "description": "Acompanhamento de fluxos de dados, alertas de erros e melhoria contínua"
+      }
+    },
+    "cta": {
+      "title": "Seus sistemas não se comunicam entre si?",
+      "subtitle": "Analisamos seu ecossistema e propomos a arquitetura de integração ideal.",
+      "button": "Solicitar Análise"
+    }
+  },
+  "applications": {
+    "hero": {
+      "title": "Aplicações que Impulsionam a Produtividade",
+      "subtitle": "Desenvolvemos plataformas web e móveis robustas centradas na experiência do usuário, desempenho e arquitetura escalável para operações críticas."
+    },
+    "focus": {
+      "title": "Pilares de Desenvolvimento",
+      "ux": {
+        "title": "Experiência do Usuário",
+        "description": "Interfaces intuitivas projetadas para minimizar a curva de aprendizado e maximizar a adoção"
+      },
+      "performance": {
+        "title": "Desempenho",
+        "description": "Otimização de carregamento, cache inteligente e arquitetura que escala sob demanda"
+      },
+      "security": {
+        "title": "Segurança",
+        "description": "Autenticação robusta, criptografia de dados e conformidade com padrões"
+      },
+      "reliability": {
+        "title": "Confiabilidade",
+        "description": "Monitoramento proativo, backup automático e recuperação de desastres"
+      }
+    },
+    "types": {
+      "title": "Tipos de Aplicações",
+      "web": {
+        "title": "Aplicações Web Empresariais",
+        "description": "Plataformas SaaS, portais de cliente, dashboards executivos e ferramentas internas",
+        "tech": "React, Next.js, Vue.js"
+      },
+      "mobile": {
+        "title": "Aplicações Móveis",
+        "description": "Apps nativos e multiplataforma para iOS e Android com sincronização offline",
+        "tech": "React Native, Flutter"
+      },
+      "pwa": {
+        "title": "Progressive Web Apps",
+        "description": "Experiência de app nativo a partir do navegador com capacidades offline",
+        "tech": "Service Workers, Cache API"
+      }
+    },
+    "stack": {
+      "title": "Stack Tecnológico",
+      "description": "Selecionamos tecnologias conforme os requisitos específicos de cada projeto",
+      "frontend": "React, Next.js, TypeScript",
+      "backend": "Node.js, Python, .NET",
+      "mobile": "React Native, Flutter",
+      "cloud": "AWS, Azure, Google Cloud"
+    },
+    "approach": {
+      "title": "Nossa Abordagem",
+      "subtitle": "Metodologia centrada no usuário final",
+      "step1": {
+        "title": "Research & UX",
+        "description": "Pesquisa de usuários, wireframes e prototipagem interativa antes de codificar"
+      },
+      "step2": {
+        "title": "Arquitetura & Design System",
+        "description": "Definição de componentes reutilizáveis, padrões de design e guia de estilos"
+      },
+      "step3": {
+        "title": "Desenvolvimento & Testing",
+        "description": "Implementação iterativa com testes automatizados e revisão de código contínua"
+      },
+      "step4": {
+        "title": "Launch & Iteração",
+        "description": "Deploy controlado, métricas de uso e evolução baseada em dados reais"
+      }
+    },
+    "cta": {
+      "title": "Precisa de uma aplicação que seus usuários amem?",
+      "subtitle": "Projetamos experiências digitais que impulsionam produtividade e adoção.",
+      "button": "Iniciar Projeto"
+    }
+  },
+  "caseStudies": {
+    "hero": {
+      "title": "Resultados que Falam por Si Mesmos",
+      "subtitle": "Casos reais de transformação digital. Problemas concretos, soluções mensuráveis, impacto verificável."
+    },
+    "case1": {
+      "client": "Empresa Logística Regional",
+      "industry": "Logística e Distribuição",
+      "challenge": "O Desafio",
+      "challengeText": "Gestão manual de rotas de distribuição com mais de 200 entregas diárias. O planejamento levava 3 horas por dia e gerava 15% de ineficiências no combustível.",
+      "solution": "Nossa Solução",
+      "solutionText": "Sistema de otimização de rotas com integração GPS em tempo real, algoritmos de roteamento inteligente e dashboard de acompanhamento operacional.",
+      "results": "Resultados",
+      "result1": "80% de redução no tempo de planejamento",
+      "result2": "22% de economia em custos de combustível",
+      "result3": "30% de melhoria nas entregas pontuais",
+      "result4": "ROI alcançado em 8 meses"
+    },
+    "case2": {
+      "client": "Rede de Varejo",
+      "industry": "Comércio Varejista",
+      "challenge": "O Desafio",
+      "challengeText": "Estoque descentralizado em 15 filiais sem sincronização. Excesso de estoque em algumas lojas e ruptura de estoque em outras.",
+      "solution": "Nossa Solução",
+      "solutionText": "Plataforma centralizada de gestão de estoque com previsão de demanda, transferências automáticas entre filiais e reabastecimento inteligente.",
+      "results": "Resultados",
+      "result1": "40% de redução em rupturas de estoque",
+      "result2": "35% de diminuição no excesso de estoque",
+      "result3": "18% de melhoria na rotatividade do estoque",
+      "result4": "Escalou para 25 filiais sem alterações"
+    },
+    "case3": {
+      "client": "Empresa Manufatureira",
+      "industry": "Manufatura Industrial",
+      "challenge": "O Desafio",
+      "challengeText": "Processo de faturamento manual com mais de 500 faturas mensais. Erros de digitação de 8% e atraso médio de 5 dias na emissão.",
+      "solution": "Nossa Solução",
+      "solutionText": "Automação completa de faturamento integrada ao ERP, geração automática a partir de ordens de compra, validações de negócio e envio programado.",
+      "results": "Resultados",
+      "result1": "Erros reduzidos para menos de 1%",
+      "result2": "Emissão instantânea pós-aprovação",
+      "result3": "2 FTEs liberados para tarefas estratégicas",
+      "result4": "40% de melhoria nos dias de recebimento"
+    },
+    "otherCta": {
+      "title": "Sua empresa enfrenta desafios semelhantes?",
+      "button": "Vamos Falar do Seu Projeto"
+    }
+  },
+  "about": {
+    "hero": {
+      "title": "Engenharia de Software com Impacto Empresarial",
+      "subtitle": "Somos uma equipe de engenheiros especializados em resolver desafios empresariais complexos por meio de soluções tecnológicas escaláveis e orientadas a resultados mensuráveis."
+    },
+    "vision": {
+      "title": "Nossa Visão",
+      "text": "Ser o parceiro tecnológico de referência para empresas que necessitam de sistemas de missão crítica, onde a excelência técnica e o impacto no negócio são requisitos inegociáveis."
+    },
+    "values": {
+      "title": "Valores que Nos Definem",
+      "excellence": {
+        "title": "Excelência Técnica",
+        "description": "Código limpo, arquiteturas robustas e melhores práticas em cada linha de código que escrevemos."
+      },
+      "results": {
+        "title": "Orientação a Resultados",
+        "description": "Medimos nosso sucesso pelo impacto nos KPIs de negócio dos nossos clientes, não por linhas de código."
+      },
+      "transparency": {
+        "title": "Transparência Total",
+        "description": "Comunicação clara e constante de avanços, riscos e decisões técnicas. Sem surpresas."
+      },
+      "partnership": {
+        "title": "Parceria Genuína",
+        "description": "Nos envolvemos no sucesso dos nossos clientes a longo prazo. O crescimento deles é o nosso crescimento."
+      }
+    },
+    "approach": {
+      "title": "Nossa Abordagem",
+      "item1": "Análise profunda antes de codificar",
+      "item2": "Arquitetura pensada para escalar",
+      "item3": "Testes exaustivos em cada entrega",
+      "item4": "Documentação técnica completa",
+      "item5": "Suporte proativo pós-implementação"
+    },
+    "expertise": {
+      "title": "Experiência Comprovada",
+      "text": "Com mais de uma década desenvolvendo sistemas empresariais críticos, trabalhamos com empresas de logística, manufatura, varejo, serviços financeiros e tecnologia em projetos de transformação digital de alto impacto."
+    },
+    "cta": {
+      "title": "Quer saber como podemos ajudá-lo?",
+      "button": "Agendar Reunião"
+    }
+  },
+  "contact": {
+    "hero": {
+      "title": "Vamos Iniciar uma Conversa Estratégica",
+      "subtitle": "Analisamos sua situação atual e propomos um plano de ação concreto. Sem compromisso, sem letras miúdas."
+    },
+    "form": {
+      "name": "Nome Completo",
+      "email": "E-mail Corporativo",
+      "company": "Empresa",
+      "phone": "Telefone",
+      "service": "Serviço de Interesse",
+      "serviceSelect": "Selecione um serviço",
+      "serviceCustom": "Software Sob Medida",
+      "serviceAutomation": "Automação Empresarial",
+      "serviceIntegration": "Integrações",
+      "serviceApp": "Aplicações Empresariais",
+      "serviceConsulting": "Consultoria Tecnológica",
+      "message": "Conte-nos sobre seu desafio",
+      "submit": "Enviar Consulta",
+      "sending": "Enviando...",
+      "success": "Mensagem enviada com sucesso. Entraremos em contato em menos de 24 horas.",
+      "error": "Erro ao enviar. Tente novamente ou escreva-nos diretamente."
+    },
+    "info": {
+      "title": "Informações de Contato",
+      "email": "E-mail",
+      "location": "Localização",
+      "schedule": "Horário de Atendimento",
+      "scheduleTime": "Segunda a Sexta, 9:00 - 18:00 (GMT-3)",
+      "response": "Tempo de Resposta",
+      "responseTime": "Menos de 24 horas úteis",
+      "whatsapp": "WhatsApp"
+    },
+    "process": {
+      "title": "Como Começamos?",
+      "step1": {
+        "title": "Consulta Inicial",
+        "description": "Reunião de 30-45 minutos para entender sua situação e objetivos"
+      },
+      "step2": {
+        "title": "Análise Técnica",
+        "description": "Avaliação de viabilidade, estimativa de esforço e proposta de arquitetura"
+      },
+      "step3": {
+        "title": "Proposta Formal",
+        "description": "Documento detalhado com escopo, cronograma e estrutura de investimento"
+      }
+    }
+  },
+  "common": {
+    "learnMore": "Saiba Mais",
+    "contactUs": "Entre em Contato",
+    "viewDetails": "Ver Detalhes",
+    "backToServices": "← Voltar para Serviços"
+  }
+}
