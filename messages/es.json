@@ -1,9 +1,11 @@
 {
   "nav": {
+    "home": "Inicio",
     "services": "Servicios",
     "caseStudies": "Casos de Éxito",
     "about": "Nosotros",
-    "contact": "Contacto"
+    "contact": "Contacto",
+    "cta": "Hablar con un especialista"
   },
   "hero": {
     "title": "Transformamos operaciones empresariales en ventajas competitivas",
@@ -20,6 +22,7 @@
     "metric4Label": "Retención de Clientes"
   },
   "problems": {
+    "badge": "Dolores",
     "title": "Desafíos que resolvemos todos los días",
     "subtitle": "Entendemos los problemas reales porque los hemos resuelto decenas de veces en industrias como logística, manufactura, retail y servicios financieros.",
     "item1": {
@@ -40,6 +43,7 @@
     }
   },
   "services": {
+    "badge": "Servicios",
     "title": "Servicios Estratégicos",
     "subtitle": "Cada servicio está diseñado para generar impacto medible en sus operaciones",
     "custom": {
@@ -64,6 +68,7 @@
     }
   },
   "methodology": {
+    "badge": "Proceso",
     "title": "Cómo Trabajamos",
     "subtitle": "Un proceso probado en +50 proyectos que garantiza entregas predecibles y resultados medibles",
     "step1": {
@@ -541,6 +546,7 @@
       "title": "Información de Contacto",
       "email": "Email",
       "location": "Ubicación",
+      "locationValue": "Montevideo, Uruguay",
       "schedule": "Horario de Atención",
       "scheduleTime": "Lunes a Viernes, 9:00 - 18:00 (GMT-3)",
       "response": "Tiempo de Respuesta",

@@ -1,9 +1,11 @@
 {
   "nav": {
+    "home": "Home",
     "services": "Services",
     "caseStudies": "Case Studies",
     "about": "About Us",
-    "contact": "Contact"
+    "contact": "Contact",
+    "cta": "Talk to an Expert"
   },
   "hero": {
     "title": "We transform business operations into competitive advantages",
@@ -20,6 +22,7 @@
     "metric4Label": "Client Retention"
   },
   "problems": {
+    "badge": "Pain points",
     "title": "Challenges we solve every day",
     "subtitle": "We understand real-world problems because we have solved them dozens of times across industries such as logistics, manufacturing, retail, and financial services.",
     "item1": {
@@ -40,6 +43,7 @@
     }
   },
   "services": {
+    "badge": "Services",
     "title": "Strategic Services",
     "subtitle": "Each service is designed to deliver measurable impact on your operations",
     "custom": {
@@ -64,6 +68,7 @@
     }
   },
   "methodology": {
+    "badge": "Process",
     "title": "How We Work",
     "subtitle": "A process proven across 50+ projects that ensures predictable deliveries and measurable results",
     "step1": {
@@ -541,6 +546,7 @@
       "title": "Contact Information",
       "email": "Email",
       "location": "Location",
+      "locationValue": "Montevideo, Uruguay",
       "schedule": "Business Hours",
       "scheduleTime": "Monday to Friday, 9:00 AM - 6:00 PM (GMT-3)",
       "response": "Response Time",

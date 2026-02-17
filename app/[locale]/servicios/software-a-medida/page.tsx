@@ -1,133 +1,91 @@
-import { useTranslations } from 'next-intl';
+import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
+import type { Metadata } from 'next';
+import { createMetadata } from '@/lib/metadata';
 
-export default function CustomSoftwarePage() {
-  const t = useTranslations('customSoftware');
+type PageProps = { params: { locale: 'es' | 'en' | 'pt' } };
+
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  return createMetadata({
+    locale: params.locale,
+    title: 'SurLogic — Custom Software',
+    description: 'Sistemas empresariales a medida con arquitectura escalable y sin vendor lock-in.',
+    path: `/${params.locale}/servicios/software-a-medida`,
+  });
+}
+
+export default async function CustomSoftwarePage({ params }: PageProps) {
+  unstable_setRequestLocale(params.locale);
+  const t = await getTranslations({ locale: params.locale, namespace: 'customSoftware' });
+  const locale = params.locale;
+
+  const benefitKeys = ['item1', 'item2', 'item3', 'item4'] as const;
+  const useCases = ['erp', 'crm', 'inventory', 'workflow', 'analytics', 'compliance'] as const;
 
   return (
     <div className="pt-20">
-      {/* Hero */}
       <section className="py-24 bg-gradient-to-b from-navy-950 to-navy-900">
-        <div className="max-w-5xl mx-auto px-6 lg:px-8 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-8">
+        <div className="max-w-6xl mx-auto px-6 lg:px-8 text-center space-y-6">
+          <p className="inline-flex px-4 py-1.5 rounded-full text-sm font-medium text-blue-200 bg-blue-500/10 border border-blue-500/20">
             {t('hero.title')}
-          </h1>
-          <p className="text-xl text-gray-300 leading-relaxed">
-            {t('hero.subtitle')}
           </p>
+          <h1 className="text-4xl md:text-6xl font-bold text-white leading-tight">
+            {t('hero.subtitle')}
+          </h1>
         </div>
       </section>
 
-      {/* Beneficios */}
-      <section className="py-20 bg-navy-900">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-white mb-12 text-center">
-            {t('benefits.title')}
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="group p-8 bg-navy-950/50 rounded-xl border border-navy-800 hover:border-blue-600/50 transition-all duration-300 hover-lift">
-              <h3 className="text-xl font-semibold text-white mb-3">{t('benefits.item1.title')}</h3>
-              <p className="text-gray-400">{t('benefits.item1.description')}</p>
+      <section className="py-16 bg-navy-900">
+        <div className="max-w-6xl mx-auto px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+          {benefitKeys.map((key, idx) => (
+            <div key={idx} className="rounded-2xl border border-white/10 bg-white/[0.03] p-6">
+              <h3 className="text-xl font-semibold text-white mb-2">{t(`benefits.${key}.title`)}</h3>
+              <p className="text-gray-300 text-sm leading-relaxed">{t(`benefits.${key}.description`)}</p>
             </div>
-            <div className="group p-8 bg-navy-950/50 rounded-xl border border-navy-800 hover:border-blue-600/50 transition-all duration-300 hover-lift">
-              <h3 className="text-xl font-semibold text-white mb-3">{t('benefits.item2.title')}</h3>
-              <p className="text-gray-400">{t('benefits.item2.description')}</p>
-            </div>
-            <div className="group p-8 bg-navy-950/50 rounded-xl border border-navy-800 hover:border-blue-600/50 transition-all duration-300 hover-lift">
-              <h3 className="text-xl font-semibold text-white mb-3">{t('benefits.item3.title')}</h3>
-              <p className="text-gray-400">{t('benefits.item3.description')}</p>
-            </div>
-            <div className="group p-8 bg-navy-950/50 rounded-xl border border-navy-800 hover:border-blue-600/50 transition-all duration-300 hover-lift">
-              <h3 className="text-xl font-semibold text-white mb-3">{t('benefits.item4.title')}</h3>
-              <p className="text-gray-400">{t('benefits.item4.description')}</p>
-            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="py-16 bg-navy-950">
+        <div className="max-w-6xl mx-auto px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <h3 className="text-3xl font-bold text-white">{t('approach.title')}</h3>
+            <p className="text-gray-400">{t('approach.subtitle')}</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+            {['discovery', 'architecture', 'development', 'delivery'].map((step, idx) => (
+              <div key={step} className="rounded-2xl border border-white/10 bg-white/[0.03] p-5">
+                <div className="text-sm text-gray-400 mb-2">0{idx + 1}</div>
+                <h4 className="text-lg font-semibold text-white mb-2">{t(`approach.${step}.title`)}</h4>
+                <p className="text-gray-300 text-sm leading-relaxed">{t(`approach.${step}.description`)}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Metodología */}
-      <section className="py-20 bg-navy-950">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-white mb-4">{t('approach.title')}</h2>
-            <p className="text-xl text-gray-400">{t('approach.subtitle')}</p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            {/* Paso 1 */}
-            <div className="group relative">
-              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-600 to-blue-400" />
-              <div className="pt-8">
-                <div className="text-7xl font-bold text-blue-900 mb-4">01</div>
-                <h3 className="text-xl font-semibold text-white mb-3">{t('approach.discovery.title')}</h3>
-                <p className="text-gray-400 text-sm leading-relaxed">
-                  {t('approach.discovery.description')}
-                </p>
-              </div>
-            </div>
-
-            {/* Paso 2 */}
-            <div className="group relative">
-              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-600 to-blue-400" />
-              <div className="pt-8">
-                <div className="text-7xl font-bold text-blue-900 mb-4">02</div>
-                <h3 className="text-xl font-semibold text-white mb-3">{t('approach.architecture.title')}</h3>
-                <p className="text-gray-400 text-sm leading-relaxed">
-                  {t('approach.architecture.description')}
-                </p>
-              </div>
-            </div>
-
-            {/* Paso 3 */}
-            <div className="group relative">
-              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-600 to-blue-400" />
-              <div className="pt-8">
-                <div className="text-7xl font-bold text-blue-900 mb-4">03</div>
-                <h3 className="text-xl font-semibold text-white mb-3">{t('approach.development.title')}</h3>
-                <p className="text-gray-400 text-sm leading-relaxed">
-                  {t('approach.development.description')}
-                </p>
-              </div>
-            </div>
-
-            {/* Paso 4 */}
-            <div className="group relative">
-              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-600 to-blue-400" />
-              <div className="pt-8">
-                <div className="text-7xl font-bold text-blue-900 mb-4">04</div>
-                <h3 className="text-xl font-semibold text-white mb-3">{t('approach.delivery.title')}</h3>
-                <p className="text-gray-400 text-sm leading-relaxed">
-                  {t('approach.delivery.description')}
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Casos de Uso */}
-      <section className="py-20 bg-navy-900">
-        <div className="max-w-5xl mx-auto px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-white mb-12 text-center">{t('useCases.title')}</h2>
+      <section className="py-16 bg-navy-900">
+        <div className="max-w-5xl mx-auto px-6 lg:px-8 text-center">
+          <h3 className="text-3xl font-bold text-white mb-8">{t('useCases.title')}</h3>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-            <div className="p-6 bg-navy-950/50 rounded-lg border border-navy-800 hover:border-blue-600/50 text-center transition-all duration-300 hover-lift">
-              <p className="text-gray-300">{t('useCases.erp')}</p>
-            </div>
-            <div className="p-6 bg-navy-950/50 rounded-lg border border-navy-800 hover:border-blue-600/50 text-center transition-all duration-300 hover-lift">
-              <p className="text-gray-300">{t('useCases.crm')}</p>
-            </div>
-            <div className="p-6 bg-navy-950/50 rounded-lg border border-navy-800 hover:border-blue-600/50 text-center transition-all duration-300 hover-lift">
-              <p className="text-gray-300">{t('useCases.inventory')}</p>
-            </div>
-            <div className="p-6 bg-navy-950/50 rounded-lg border border-navy-800 hover:border-blue-600/50 text-center transition-all duration-300 hover-lift">
-              <p className="text-gray-300">{t('useCases.workflow')}</p>
-            </div>
-            <div className="p-6 bg-navy-950/50 rounded-lg border border-navy-800 hover:border-blue-600/50 text-center transition-all duration-300 hover-lift">
-              <p className="text-gray-300">{t('useCases.analytics')}</p>
-            </div>
-            <div className="p-6 bg-navy-950/50 rounded-lg border border-navy-800 hover:border-blue-600/50 text-center transition-all duration-300 hover-lift">
-              <p className="text-gray-300">{t('useCases.compliance')}</p>
-            </div>
+            {useCases.map((item) => (
+              <div key={item} className="rounded-xl border border-white/10 bg-white/[0.03] p-4 text-gray-200 text-sm">
+                {t(`useCases.${item}`)}
+              </div>
+            ))}
           </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-gradient-to-br from-blue-600/10 to-indigo-600/10">
+        <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center space-y-4">
+          <h3 className="text-3xl font-bold text-white">{t('cta.title')}</h3>
+          <p className="text-gray-200">{t('cta.subtitle')}</p>
+          <a
+            href={`/${locale}/contacto`}
+            className="inline-flex items-center justify-center px-8 py-4 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-500 text-white font-semibold shadow-lg shadow-blue-700/30 hover:translate-y-[-1px] transition-all"
+          >
+            {t('cta.button')}
+          </a>
         </div>
       </section>
     </div>

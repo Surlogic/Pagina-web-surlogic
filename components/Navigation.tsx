@@ -26,23 +26,31 @@ export default function Navigation({ locale }: NavigationProps) {
   ];
 
   const navLinks = [
+    { href: `/${locale}`, label: t('home') },
     { href: `/${locale}/servicios`, label: t('services') },
     { href: `/${locale}/casos-de-exito`, label: t('caseStudies') },
     { href: `/${locale}/nosotros`, label: t('about') },
   ];
 
   return (
-    <nav className={`fixed w-full z-50 transition-all duration-300 ${
-      scrolled
-        ? 'bg-navy-950/90 backdrop-blur-xl border-b border-white/[0.06] shadow-lg shadow-black/20'
-        : 'bg-transparent'
-    }`}>
+    <nav
+      className={`fixed w-full z-50 transition-all duration-300 ${
+        scrolled
+          ? 'bg-navy-950/90 backdrop-blur-xl border-b border-white/[0.06] shadow-lg shadow-black/20'
+          : 'bg-gradient-to-b from-navy-950/90 via-navy-950/60 to-transparent'
+      }`}
+    >
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link href={`/${locale}`} className="flex items-center gap-1 text-2xl font-bold text-white group">
-            <span className="text-blue-500 group-hover:text-blue-400 transition-colors">Sur</span>
-            <span className="group-hover:text-gray-100 transition-colors">Logic</span>
+          <Link
+            href={`/${locale}`}
+            className="flex items-center gap-2 text-xl md:text-2xl font-bold text-white group"
+          >
+            <span className="px-2 py-1 rounded-lg bg-white/5 border border-white/10 text-blue-400 group-hover:border-blue-400 transition-colors">
+              Sur
+            </span>
+            <span className="tracking-tight group-hover:text-gray-100 transition-colors">Logic</span>
           </Link>
 
           {/* Desktop Nav */}
@@ -59,21 +67,21 @@ export default function Navigation({ locale }: NavigationProps) {
 
             <Link
               href={`/${locale}/contacto`}
-              className="ml-4 px-6 py-2.5 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-500 transition-all duration-200 shadow-sm shadow-blue-600/20"
+              className="ml-3 px-5 py-2.5 bg-gradient-to-r from-blue-600 to-indigo-500 text-white text-sm font-semibold rounded-lg shadow-lg shadow-blue-700/30 hover:translate-y-[-1px] transition-all duration-200"
             >
-              {t('contact')}
+              {t('cta')}
             </Link>
 
             {/* Language switcher */}
-            <div className="flex items-center ml-4 pl-4 border-l border-white/[0.08]">
+            <div className="flex items-center ml-4 pl-4 border-l border-white/[0.08] gap-1">
               {locales.map((loc) => (
                 <Link
                   key={loc.code}
                   href={`/${loc.code}`}
-                  className={`px-2.5 py-1.5 text-xs font-medium rounded-md transition-all duration-200 ${
+                  className={`px-3 py-1.5 text-xs font-semibold rounded-md transition-all duration-200 ${
                     locale === loc.code
-                      ? 'bg-white/[0.1] text-white'
-                      : 'text-gray-500 hover:text-gray-300'
+                      ? 'bg-white/[0.12] text-white border border-white/20'
+                      : 'text-gray-500 hover:text-gray-200 hover:bg-white/[0.05]'
                   }`}
                 >
                   {loc.label}
@@ -85,7 +93,7 @@ export default function Navigation({ locale }: NavigationProps) {
           {/* Mobile hamburger */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden w-10 h-10 flex items-center justify-center rounded-lg hover:bg-white/[0.05] transition-colors"
+            className="md:hidden w-11 h-11 flex items-center justify-center rounded-lg border border-white/10 bg-white/5 hover:bg-white/[0.08] transition-colors"
             aria-label="Menu"
           >
             <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -102,35 +110,36 @@ export default function Navigation({ locale }: NavigationProps) {
       {/* Mobile menu */}
       {isOpen && (
         <div className="md:hidden bg-navy-950/95 backdrop-blur-xl border-t border-white/[0.06]">
-          <div className="px-6 py-6 space-y-1">
+          <div className="px-6 py-6 space-y-2">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
                 onClick={() => setIsOpen(false)}
-                className="block px-4 py-3 text-gray-300 hover:text-white hover:bg-white/[0.05] rounded-lg transition-colors"
+                className="block px-4 py-3 text-gray-200 hover:text-white hover:bg-white/[0.05] rounded-lg transition-colors"
               >
                 {link.label}
               </Link>
             ))}
+
             <Link
               href={`/${locale}/contacto`}
               onClick={() => setIsOpen(false)}
-              className="block px-4 py-3 mt-2 bg-blue-600 text-white text-center rounded-lg hover:bg-blue-500 transition-colors font-medium"
+              className="block px-4 py-3 bg-gradient-to-r from-blue-600 to-indigo-500 text-white text-center rounded-lg shadow-lg shadow-blue-700/20 font-semibold"
             >
-              {t('contact')}
+              {t('cta')}
             </Link>
 
-            <div className="flex gap-2 pt-4 mt-4 border-t border-white/[0.06]">
+            <div className="flex gap-2 pt-5 mt-5 border-t border-white/[0.06]">
               {locales.map((loc) => (
                 <Link
                   key={loc.code}
                   href={`/${loc.code}`}
                   onClick={() => setIsOpen(false)}
-                  className={`px-4 py-2 text-sm rounded-lg ${
+                  className={`flex-1 px-4 py-2 text-sm rounded-lg text-center ${
                     locale === loc.code
-                      ? 'bg-white/[0.1] text-white'
-                      : 'text-gray-500 hover:text-white'
+                      ? 'bg-white/[0.1] text-white border border-white/15'
+                      : 'text-gray-400 hover:text-white hover:bg-white/[0.05]'
                   }`}
                 >
                   {loc.label}

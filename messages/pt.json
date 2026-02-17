@@ -1,9 +1,11 @@
 {
   "nav": {
+    "home": "Início",
     "services": "Serviços",
     "caseStudies": "Casos de Sucesso",
     "about": "Sobre Nós",
-    "contact": "Contato"
+    "contact": "Contato",
+    "cta": "Falar com um Especialista"
   },
   "hero": {
     "title": "Transformamos operações empresariais em vantagens competitivas",
@@ -20,6 +22,7 @@
     "metric4Label": "Retenção de Clientes"
   },
   "problems": {
+    "badge": "Dores",
     "title": "Desafios que resolvemos todos os dias",
     "subtitle": "Entendemos os problemas reais porque já os resolvemos dezenas de vezes em setores como logística, manufatura, varejo e serviços financeiros.",
     "item1": {
@@ -40,6 +43,7 @@
     }
   },
   "services": {
+    "badge": "Serviços",
     "title": "Serviços Estratégicos",
     "subtitle": "Cada serviço é projetado para gerar impacto mensurável em suas operações",
     "custom": {
@@ -64,6 +68,7 @@
     }
   },
   "methodology": {
+    "badge": "Processo",
     "title": "Como Trabalhamos",
     "subtitle": "Um processo comprovado em +50 projetos que garante entregas previsíveis e resultados mensuráveis",
     "step1": {
@@ -541,6 +546,7 @@
       "title": "Informações de Contato",
       "email": "E-mail",
       "location": "Localização",
+      "locationValue": "Montevidéu, Uruguai",
       "schedule": "Horário de Atendimento",
       "scheduleTime": "Segunda a Sexta, 9:00 - 18:00 (GMT-3)",
       "response": "Tempo de Resposta",

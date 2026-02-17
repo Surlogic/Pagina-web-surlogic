@@ -1,167 +1,110 @@
-import { useTranslations } from 'next-intl';
+import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
+import type { Metadata } from 'next';
+import { createMetadata } from '@/lib/metadata';
 
-export default function IntegrationsPage() {
-  const t = useTranslations('integrations');
+type PageProps = { params: { locale: 'es' | 'en' | 'pt' } };
+
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  return createMetadata({
+    locale: params.locale,
+    title: 'SurLogic — Integrations',
+    description: 'Integraciones que unifican ecosistemas y eliminan silos de información.',
+    path: `/${params.locale}/servicios/integraciones`,
+  });
+}
+
+export default async function IntegrationsPage({ params }: PageProps) {
+  unstable_setRequestLocale(params.locale);
+  const t = await getTranslations({ locale: params.locale, namespace: 'integrations' });
+  const locale = params.locale;
+
+  const challengeKeys = ['item1', 'item2', 'item3', 'item4'] as const;
+  const platformKeys = ['erp', 'crm', 'ecommerce', 'payment', 'logistics', 'accounting'] as const;
+  const architectureKeys = ['rest', 'webhooks', 'queues', 'etl'] as const;
 
   return (
     <div className="pt-20">
-      {/* Hero */}
-      <section className="py-24 bg-gradient-to-b from-navy-950 to-navy-900">
-        <div className="max-w-5xl mx-auto px-6 lg:px-8 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-8">
+      <section className="py-24 bg-gradient-to-b from-navy-950 to-navy-900 text-center">
+        <div className="max-w-6xl mx-auto px-6 lg:px-8 space-y-4">
+          <p className="inline-flex px-4 py-1.5 rounded-full text-sm font-medium text-purple-200 bg-purple-500/10 border border-purple-500/20">
             {t('hero.title')}
-          </h1>
-          <p className="text-xl text-gray-300 leading-relaxed">
-            {t('hero.subtitle')}
           </p>
+          <h1 className="text-4xl md:text-5xl font-bold text-white">{t('hero.subtitle')}</h1>
         </div>
       </section>
 
-      {/* Desafíos */}
-      <section className="py-20 bg-navy-900">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-white mb-12 text-center">
-            {t('challenges.title')}
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="p-8 bg-navy-950/50 rounded-xl border border-navy-800 hover:border-blue-600/50 transition-all duration-300 hover-lift">
-              <h3 className="text-xl font-semibold text-white mb-3">{t('challenges.item1.title')}</h3>
-              <p className="text-gray-400">{t('challenges.item1.description')}</p>
-            </div>
-            <div className="p-8 bg-navy-950/50 rounded-xl border border-navy-800 hover:border-blue-600/50 transition-all duration-300 hover-lift">
-              <h3 className="text-xl font-semibold text-white mb-3">{t('challenges.item2.title')}</h3>
-              <p className="text-gray-400">{t('challenges.item2.description')}</p>
-            </div>
-            <div className="p-8 bg-navy-950/50 rounded-xl border border-navy-800 hover:border-blue-600/50 transition-all duration-300 hover-lift">
-              <h3 className="text-xl font-semibold text-white mb-3">{t('challenges.item3.title')}</h3>
-              <p className="text-gray-400">{t('challenges.item3.description')}</p>
-            </div>
-            <div className="p-8 bg-navy-950/50 rounded-xl border border-navy-800 hover:border-blue-600/50 transition-all duration-300 hover-lift">
-              <h3 className="text-xl font-semibold text-white mb-3">{t('challenges.item4.title')}</h3>
-              <p className="text-gray-400">{t('challenges.item4.description')}</p>
-            </div>
+      <section className="py-16 bg-navy-900">
+        <div className="max-w-6xl mx-auto px-6 lg:px-8">
+          <div className="text-center mb-8">
+            <h3 className="text-3xl font-bold text-white">{t('challenges.title')}</h3>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {challengeKeys.map((key) => (
+              <div key={key} className="rounded-2xl border border-white/10 bg-white/[0.03] p-6">
+                <h4 className="text-lg font-semibold text-white mb-2">{t(`challenges.${key}.title`)}</h4>
+                <p className="text-gray-300 text-sm leading-relaxed">{t(`challenges.${key}.description`)}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Plataformas */}
-      <section className="py-20 bg-navy-950">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-white mb-4">{t('platforms.title')}</h2>
-            <p className="text-xl text-gray-400">{t('platforms.subtitle')}</p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="p-6 bg-navy-900/50 rounded-xl border border-navy-800 hover:border-blue-600/50 transition-all duration-300 hover-lift">
-              <h3 className="text-lg font-semibold text-blue-400 mb-3">ERP</h3>
-              <p className="text-gray-300">{t('platforms.erp')}</p>
-            </div>
-            <div className="p-6 bg-navy-900/50 rounded-xl border border-navy-800 hover:border-blue-600/50 transition-all duration-300 hover-lift">
-              <h3 className="text-lg font-semibold text-blue-400 mb-3">CRM</h3>
-              <p className="text-gray-300">{t('platforms.crm')}</p>
-            </div>
-            <div className="p-6 bg-navy-900/50 rounded-xl border border-navy-800 hover:border-blue-600/50 transition-all duration-300 hover-lift">
-              <h3 className="text-lg font-semibold text-blue-400 mb-3">E-commerce</h3>
-              <p className="text-gray-300">{t('platforms.ecommerce')}</p>
-            </div>
-            <div className="p-6 bg-navy-900/50 rounded-xl border border-navy-800 hover:border-blue-600/50 transition-all duration-300 hover-lift">
-              <h3 className="text-lg font-semibold text-blue-400 mb-3">Payment</h3>
-              <p className="text-gray-300">{t('platforms.payment')}, dLocal</p>
-            </div>
-            <div className="p-6 bg-navy-900/50 rounded-xl border border-navy-800 hover:border-blue-600/50 transition-all duration-300 hover-lift">
-              <h3 className="text-lg font-semibold text-blue-400 mb-3">Logistics</h3>
-              <p className="text-gray-300">{t('platforms.logistics')}</p>
-            </div>
-            <div className="p-6 bg-navy-900/50 rounded-xl border border-navy-800 hover:border-blue-600/50 transition-all duration-300 hover-lift">
-              <h3 className="text-lg font-semibold text-blue-400 mb-3">Accounting</h3>
-              <p className="text-gray-300">{t('platforms.accounting')}, Zeta</p>
+      <section className="py-16 bg-navy-950">
+        <div className="max-w-6xl mx-auto px-6 lg:px-8">
+          <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-6">
+            <h3 className="text-2xl font-semibold text-white mb-4">{t('platforms.title')}</h3>
+            <p className="text-gray-400 text-sm mb-6">{t('platforms.subtitle')}</p>
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+              {platformKeys.map((key) => (
+                <div key={key} className="rounded-xl border border-white/10 bg-white/[0.03] p-4 text-sm text-gray-200">
+                  {t(`platforms.${key}`)}
+                </div>
+              ))}
             </div>
           </div>
         </div>
       </section>
 
-      {/* Metodología */}
-      <section className="py-20 bg-navy-900">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-white mb-4">Nuestro Enfoque</h2>
-            <p className="text-xl text-gray-400">Metodología probada para entrega de sistemas críticos</p>
+      <section className="py-16 bg-navy-900">
+        <div className="max-w-6xl mx-auto px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-4">
+          {architectureKeys.map((key, idx) => (
+            <div key={key} className="rounded-2xl border border-white/10 bg-white/[0.03] p-5">
+              <div className="text-sm text-gray-400 mb-1">0{idx + 1}</div>
+              <h4 className="text-lg font-semibold text-white mb-2">{t(`architecture.${key}.title`)}</h4>
+              <p className="text-gray-300 text-sm leading-relaxed">{t(`architecture.${key}.description`)}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="py-16 bg-navy-950">
+        <div className="max-w-6xl mx-auto px-6 lg:px-8">
+          <div className="text-center mb-8">
+            <h3 className="text-3xl font-bold text-white">{t('approach.title')}</h3>
+            <p className="text-gray-400">{t('approach.subtitle')}</p>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            {/* Paso 1 */}
-            <div className="group relative">
-              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-600 to-blue-400" />
-              <div className="pt-8">
-                <div className="text-7xl font-bold text-blue-900 mb-4">01</div>
-                <h3 className="text-xl font-semibold text-white mb-3">Análisis Estratégico</h3>
-                <p className="text-gray-400 text-sm leading-relaxed">
-                  Evaluamos objetivos de negocio, mapeo de procesos y definición de arquitectura óptima
-                </p>
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+            {['step1', 'step2', 'step3', 'step4'].map((step, idx) => (
+              <div key={step} className="rounded-2xl border border-white/10 bg-white/[0.03] p-5">
+                <div className="text-sm text-gray-400 mb-1">0{idx + 1}</div>
+                <h4 className="text-lg font-semibold text-white mb-2">{t(`approach.${step}.title`)}</h4>
+                <p className="text-gray-300 text-sm leading-relaxed">{t(`approach.${step}.description`)}</p>
               </div>
-            </div>
-
-            {/* Paso 2 */}
-            <div className="group relative">
-              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-600 to-blue-400" />
-              <div className="pt-8">
-                <div className="text-7xl font-bold text-blue-900 mb-4">02</div>
-                <h3 className="text-xl font-semibold text-white mb-3">Desarrollo Ágil</h3>
-                <p className="text-gray-400 text-sm leading-relaxed">
-                  Implementación iterativa con entregas continuas y validación constante de resultados
-                </p>
-              </div>
-            </div>
-
-            {/* Paso 3 */}
-            <div className="group relative">
-              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-600 to-blue-400" />
-              <div className="pt-8">
-                <div className="text-7xl font-bold text-blue-900 mb-4">03</div>
-                <h3 className="text-xl font-semibold text-white mb-3">Testing Riguroso</h3>
-                <p className="text-gray-400 text-sm leading-relaxed">
-                  Pruebas exhaustivas de funcionalidad, rendimiento, seguridad e integración
-                </p>
-              </div>
-            </div>
-
-            {/* Paso 4 */}
-            <div className="group relative">
-              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-600 to-blue-400" />
-              <div className="pt-8">
-                <div className="text-7xl font-bold text-blue-900 mb-4">04</div>
-                <h3 className="text-xl font-semibold text-white mb-3">Deploy y Soporte</h3>
-                <p className="text-gray-400 text-sm leading-relaxed">
-                  Implementación controlada y mantenimiento proactivo para garantizar operación continua
-                </p>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Arquitectura */}
-      <section className="py-20 bg-navy-950">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-white mb-12 text-center">{t('architecture.title')}</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="p-6 bg-navy-900/50 rounded-xl border border-navy-800 hover:border-blue-600/50 text-center transition-all duration-300 hover-lift">
-              <h3 className="text-lg font-semibold text-white mb-2">{t('architecture.rest.title')}</h3>
-              <p className="text-gray-400 text-sm">{t('architecture.rest.description')}</p>
-            </div>
-            <div className="p-6 bg-navy-900/50 rounded-xl border border-navy-800 hover:border-blue-600/50 text-center transition-all duration-300 hover-lift">
-              <h3 className="text-lg font-semibold text-white mb-2">{t('architecture.webhooks.title')}</h3>
-              <p className="text-gray-400 text-sm">{t('architecture.webhooks.description')}</p>
-            </div>
-            <div className="p-6 bg-navy-900/50 rounded-xl border border-navy-800 hover:border-blue-600/50 text-center transition-all duration-300 hover-lift">
-              <h3 className="text-lg font-semibold text-white mb-2">{t('architecture.messageQueues.title')}</h3>
-              <p className="text-gray-400 text-sm">{t('architecture.messageQueues.description')}</p>
-            </div>
-            <div className="p-6 bg-navy-900/50 rounded-xl border border-navy-800 hover:border-blue-600/50 text-center transition-all duration-300 hover-lift">
-              <h3 className="text-lg font-semibold text-white mb-2">{t('architecture.etl.title')}</h3>
-              <p className="text-gray-400 text-sm">{t('architecture.etl.description')}</p>
-            </div>
-          </div>
+      <section className="py-20 bg-gradient-to-br from-purple-500/10 to-indigo-500/10">
+        <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center space-y-4">
+          <h3 className="text-3xl font-bold text-white">{t('cta.title')}</h3>
+          <p className="text-gray-200">{t('cta.subtitle')}</p>
+          <a
+            href={`/${locale}/contacto`}
+            className="inline-flex items-center justify-center px-8 py-4 rounded-xl bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-semibold shadow-lg shadow-purple-600/30 hover:translate-y-[-1px] transition-all"
+          >
+            {t('cta.button')}
+          </a>
         </div>
       </section>
     </div>
