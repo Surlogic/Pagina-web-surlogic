@@ -1,5 +1,4 @@
 import { NextIntlClientProvider } from 'next-intl';
-import { getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { Inter } from 'next/font/google';
 import Navigation from '@/components/Navigation';
@@ -23,16 +22,16 @@ export default async function LocaleLayout({
   children: React.ReactNode;
   params: { locale: string };
 }) {
-  if (!locales.includes(locale as any)) {
+  if (!locales.includes(locale)) {
     notFound();
   }
 
-  const messages = await getMessages();
+  const messages = (await import(`@/messages/${locale}.json`)).default;
 
   return (
     <html lang={locale} className={inter.variable}>
       <body className="antialiased">
-        <NextIntlClientProvider messages={messages}>
+        <NextIntlClientProvider locale={locale} messages={messages}>
           <Navigation locale={locale} />
           <main>{children}</main>
           <Footer />
