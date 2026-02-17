@@ -17,7 +17,7 @@
     "metric2": "70%",
     "metric2Label": "Redução de Custos",
     "metric3": "+12",
-    "metric3Label": "Anos de Experiência",
+    "metric3Label": "Equipe Especializada",
     "metric4": "98%",
     "metric4Label": "Retenção de Clientes"
   },
@@ -122,7 +122,7 @@
     "note": "Sem compromisso · Resposta em menos de 24h"
   },
   "footer": {
-    "description": "Parceiro tecnológico para empresas que necessitam de soluções críticas de alto impacto. Mais de uma década transformando operações empresariais na América Latina.",
+    "description": "Parceiro tecnológico para empresas que necessitam de soluções críticas de alto impacto. Transformamos operações empresariais na América Latina.",
     "services": "Serviços",
     "company": "Empresa",
     "customSoftware": "Software Sob Medida",
@@ -512,7 +512,7 @@
     },
     "expertise": {
       "title": "Experiência Comprovada",
-      "text": "Com mais de uma década desenvolvendo sistemas empresariais críticos, trabalhamos com empresas de logística, manufatura, varejo, serviços financeiros e tecnologia em projetos de transformação digital de alto impacto."
+      "text": "Desenvolvemos sistemas empresariais críticos e trabalhamos com empresas de logística, manufatura, varejo, serviços financeiros e tecnologia em projetos de transformação digital de alto impacto."
     },
     "cta": {
       "title": "Quer saber como podemos ajudá-lo?",

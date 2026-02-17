@@ -9,13 +9,6 @@ export default function Hero() {
   const params = useParams();
   const locale = params.locale as string;
 
-  const metrics = [
-    { value: t('metric1'), label: t('metric1Label') },
-    { value: t('metric2'), label: t('metric2Label') },
-    { value: t('metric3'), label: t('metric3Label') },
-    { value: t('metric4'), label: t('metric4Label') },
-  ];
-
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-navy-950 via-navy-900 to-navy-950 pt-24">
       <div className="absolute inset-0 opacity-[0.08] bg-[radial-gradient(circle_at_20%_20%,rgba(59,130,246,0.25),transparent_35%),radial-gradient(circle_at_80%_0%,rgba(167,139,250,0.22),transparent_30%)]" />
@@ -55,17 +48,6 @@ export default function Hero() {
               </Link>
             </div>
 
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 rounded-2xl bg-white/5 border border-white/10 p-4">
-              {metrics.map((metric, idx) => (
-                <div
-                  key={idx}
-                  className="rounded-xl bg-navy-950/60 border border-white/5 px-4 py-3 text-center hover:border-blue-500/40 transition-colors"
-                >
-                  <div className="text-2xl font-bold text-white">{metric.value}</div>
-                  <div className="text-xs text-gray-400">{metric.label}</div>
-                </div>
-              ))}
-            </div>
           </div>
 
           <div className="relative">

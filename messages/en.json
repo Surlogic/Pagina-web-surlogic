@@ -17,7 +17,7 @@
     "metric2": "70%",
     "metric2Label": "Cost Reduction",
     "metric3": "+12",
-    "metric3Label": "Years of Experience",
+    "metric3Label": "Specialized Team",
     "metric4": "98%",
     "metric4Label": "Client Retention"
   },
@@ -122,7 +122,7 @@
     "note": "No commitment · Response within 24 hours"
   },
   "footer": {
-    "description": "Technology partner for companies that require high-impact, mission-critical solutions. Over a decade transforming business operations across Latin America.",
+    "description": "Technology partner for companies that require high-impact, mission-critical solutions. We transform business operations across Latin America.",
     "services": "Services",
     "company": "Company",
     "customSoftware": "Custom Software",
@@ -512,7 +512,7 @@
     },
     "expertise": {
       "title": "Proven Experience",
-      "text": "With over a decade developing mission-critical enterprise systems, we have worked with companies in logistics, manufacturing, retail, financial services, and technology on high-impact digital transformation projects."
+      "text": "We develop mission-critical enterprise systems and work with companies in logistics, manufacturing, retail, financial services, and technology on high-impact digital transformation projects."
     },
     "cta": {
       "title": "Want to learn how we can help?",

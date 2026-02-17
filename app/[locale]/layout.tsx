@@ -34,14 +34,10 @@ export default async function LocaleLayout({
   const messages = (await import(`@/messages/${locale}.json`)).default;
 
   return (
-    <html lang={locale}>
-      <body className="antialiased font-sans bg-navy-950">
-        <NextIntlClientProvider locale={locale} messages={messages}>
-          <Navigation locale={locale} />
-          <main>{children}</main>
-          <Footer />
-        </NextIntlClientProvider>
-      </body>
-    </html>
+    <NextIntlClientProvider locale={locale} messages={messages}>
+      <Navigation locale={locale} />
+      <main>{children}</main>
+      <Footer />
+    </NextIntlClientProvider>
   );
 }

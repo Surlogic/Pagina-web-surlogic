@@ -26,5 +26,11 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return children;
+  return (
+    <html lang="es">
+      <body className="antialiased bg-navy-950">
+        {children}
+      </body>
+    </html>
+  );
 }
