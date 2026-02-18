@@ -10,7 +10,7 @@ type RevealProps = {
 };
 
 export default function Reveal({ as = 'div', className, delay = 0, children }: RevealProps) {
-  const Component = as;
+  const Component: any = as;
   const ref = useRef<HTMLElement | null>(null);
   const [visible, setVisible] = useState(false);
 
@@ -36,7 +36,7 @@ export default function Reveal({ as = 'div', className, delay = 0, children }: R
 
   return (
     <Component
-      ref={ref as any}
+      ref={ref}
       className={classes}
       style={{ ['--reveal-delay' as string]: `${delay}ms` }}
     >
