@@ -45,7 +45,7 @@ export default function Hero() {
 
       <div className="relative max-w-7xl mx-auto px-6 lg:px-8 py-12 sm:py-16 lg:py-10 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-[1.05fr,0.95fr] gap-10 lg:gap-12 items-center">
-          <div className="space-y-6 lg:space-y-7">
+          <div className="space-y-5 lg:space-y-6">
             <div
               className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm text-blue-200 animate-fade-in-up"
               style={{ animationDelay: '50ms' }}
@@ -55,40 +55,22 @@ export default function Hero() {
             </div>
 
             <h1
-              className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight text-balance animate-fade-in-up"
+              className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white leading-tight text-balance animate-fade-in-up"
               style={{ animationDelay: '140ms' }}
             >
               {t('title')}
             </h1>
 
             <p
-              className="text-base sm:text-lg md:text-xl text-gray-300 leading-relaxed max-w-2xl animate-fade-in-up"
+              className="text-sm sm:text-base md:text-lg text-gray-300 leading-relaxed max-w-2xl animate-fade-in-up"
               style={{ animationDelay: '220ms' }}
             >
               {t('subtitle')}
             </p>
 
             <div
-              className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 max-w-md sm:max-w-lg animate-fade-in-up"
-              style={{ animationDelay: '280ms' }}
-            >
-              <div className="rounded-xl bg-white/5 border border-white/10 p-4">
-                <div className="text-xs text-gray-400">{t('metricCostLabel')}</div>
-                <div className="text-2xl font-semibold text-white">
-                  <CountUp end={70} prefix="-" suffix="%" />
-                </div>
-              </div>
-              <div className="rounded-xl bg-white/5 border border-white/10 p-4">
-                <div className="text-xs text-gray-400">{t('metricProjectLabel')}</div>
-                <div className="text-2xl font-semibold text-white">
-                  <CountUp end={1} />
-                </div>
-              </div>
-            </div>
-
-            <div
               className="flex flex-col sm:flex-row gap-4 animate-fade-in-up"
-              style={{ animationDelay: '360ms' }}
+              style={{ animationDelay: '320ms' }}
             >
               <Link
                 href={`/${locale}/contacto`}
@@ -98,6 +80,12 @@ export default function Hero() {
                 <svg className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
                 </svg>
+              </Link>
+              <Link
+                href={`/${locale}/casos-de-exito`}
+                className="inline-flex w-full sm:w-auto items-center justify-center px-8 py-4 rounded-xl border border-white/15 text-white/90 font-semibold hover:border-blue-400/60 hover:text-white transition-all"
+              >
+                {t('ctaSecondary')}
               </Link>
             </div>
 
@@ -141,6 +129,24 @@ export default function Hero() {
                 ))}
               </div>
 
+            </div>
+
+            <div
+              className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 max-w-md sm:max-w-lg mx-auto animate-fade-in-up"
+              style={{ animationDelay: '380ms' }}
+            >
+              <div className="rounded-xl bg-white/5 border border-white/10 p-4">
+                <div className="text-xs text-gray-400">{t('metricCostLabel')}</div>
+                <div className="text-2xl font-semibold text-white">
+                  <CountUp end={70} prefix="-" suffix="%" />
+                </div>
+              </div>
+              <div className="rounded-xl bg-white/5 border border-white/10 p-4">
+                <div className="text-xs text-gray-400">{t('metricProjectLabel')}</div>
+                <div className="text-2xl font-semibold text-white">
+                  <CountUp end={1} />
+                </div>
+              </div>
             </div>
           </div>
         </div>
