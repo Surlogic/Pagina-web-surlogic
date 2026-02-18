@@ -75,7 +75,7 @@ export default async function AutomationPage({ params }: PageProps) {
           <p className="text-gray-200">{t('cta.subtitle')}</p>
           <a
             href={`/${locale}/contacto`}
-            className="inline-flex items-center justify-center px-8 py-4 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-semibold shadow-lg shadow-emerald-600/30 hover:translate-y-[-1px] transition-all"
+            className="btn-sheen inline-flex items-center justify-center px-8 py-4 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-semibold shadow-lg shadow-emerald-600/30 hover:translate-y-[-1px] transition-all"
           >
             {t('cta.button')}
           </a>

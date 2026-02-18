@@ -3,6 +3,7 @@
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import { useParams } from 'next/navigation';
+import Reveal from '@/components/common/Reveal';
 
 export default function Services() {
   const t = useTranslations('services');
@@ -65,47 +66,48 @@ export default function Services() {
   ];
 
   return (
-    <section className="py-24 bg-navy-950 relative">
+    <Reveal as="section" className="py-24 bg-navy-950 relative">
       <div className="absolute inset-0 bg-gradient-to-b from-navy-900/50 via-transparent to-navy-950/70" />
       <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="text-center mb-14">
+        <Reveal className="text-center mb-14" delay={100}>
           <div className="inline-flex items-center gap-2 mb-4 px-4 py-1.5 rounded-full text-sm font-medium text-blue-200 bg-blue-500/10 border border-blue-500/20">
             {t('badge')}
           </div>
           <h2 className="text-3xl md:text-5xl font-bold text-white mb-4 text-balance">{t('title')}</h2>
           <p className="text-lg text-gray-400 max-w-3xl mx-auto">{t('subtitle')}</p>
-        </div>
+        </Reveal>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {services.map((service) => (
-            <Link
-              key={service.key}
-              href={service.link}
-              className="group relative p-8 lg:p-9 rounded-2xl border border-white/8 bg-white/[0.03] overflow-hidden hover:border-white/15 transition-colors"
-            >
-              <div className={`absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-br ${service.color}`} />
+          {services.map((service, index) => (
+            <Reveal key={service.key} delay={index * 120} className="h-full">
+              <Link
+                href={service.link}
+                className="group relative block w-full h-full p-8 lg:p-9 rounded-2xl border border-white/8 bg-white/[0.03] overflow-hidden hover:border-white/15 transition-colors"
+              >
+                <div className={`absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-br ${service.color}`} />
 
-              <div className="relative flex flex-col h-full gap-4">
-                <div className="w-12 h-12 rounded-xl bg-white/8 border border-white/10 flex items-center justify-center text-white group-hover:scale-105 transition-transform">
-                  {service.icon}
-                </div>
+                <div className="relative flex flex-col h-full gap-4">
+                  <div className="w-12 h-12 rounded-xl bg-white/8 border border-white/10 flex items-center justify-center text-white group-hover:scale-105 transition-transform">
+                    {service.icon}
+                  </div>
 
-                <div className="flex-1 space-y-3">
-                  <h3 className="text-2xl font-semibold text-white">{service.title}</h3>
-                  <p className="text-gray-300 leading-relaxed text-sm">{service.description}</p>
-                </div>
+                  <div className="flex-1 space-y-3">
+                    <h3 className="text-2xl font-semibold text-white">{service.title}</h3>
+                    <p className="text-gray-300 leading-relaxed text-sm">{service.description}</p>
+                  </div>
 
-                <div className="inline-flex items-center text-sm font-semibold text-white">
-                  <span>{service.linkText}</span>
-                  <svg className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.5 4.5L21 12m0 0-7.5 7.5M21 12H3" />
-                  </svg>
+                  <div className="inline-flex items-center text-sm font-semibold text-white">
+                    <span>{service.linkText}</span>
+                    <svg className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.5 4.5L21 12m0 0-7.5 7.5M21 12H3" />
+                    </svg>
+                  </div>
                 </div>
-              </div>
-            </Link>
+              </Link>
+            </Reveal>
           ))}
         </div>
       </div>
-    </section>
+    </Reveal>
   );
 }

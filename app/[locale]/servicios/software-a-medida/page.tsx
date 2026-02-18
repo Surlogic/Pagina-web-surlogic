@@ -83,7 +83,7 @@ export default async function CustomSoftwarePage({ params }: PageProps) {
           <p className="text-gray-200">{t('cta.subtitle')}</p>
           <a
             href={`/${locale}/contacto`}
-            className="inline-flex items-center justify-center px-8 py-4 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-500 text-white font-semibold shadow-lg shadow-blue-700/30 hover:translate-y-[-1px] transition-all"
+            className="btn-sheen inline-flex items-center justify-center px-8 py-4 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-500 text-white font-semibold shadow-lg shadow-blue-700/30 hover:translate-y-[-1px] transition-all"
           >
             {t('cta.button')}
           </a>

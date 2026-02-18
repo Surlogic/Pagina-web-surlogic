@@ -133,7 +133,7 @@ export function ContactForm({ strings }: ContactFormProps) {
         <button
           type="submit"
           disabled={status === 'sending'}
-          className="inline-flex items-center justify-center px-8 py-4 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-500 text-white font-semibold shadow-lg shadow-blue-700/30 hover:translate-y-[-1px] transition-all disabled:opacity-60"
+          className="btn-sheen inline-flex items-center justify-center px-8 py-4 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-500 text-white font-semibold shadow-lg shadow-blue-700/30 hover:translate-y-[-1px] transition-all disabled:opacity-60"
         >
           {status === 'sending' ? strings.sending : strings.submit}
         </button>

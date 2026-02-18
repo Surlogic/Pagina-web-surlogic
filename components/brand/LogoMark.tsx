@@ -4,20 +4,16 @@ type LogoMarkProps = {
 };
 
 export default function LogoMark({ className, title = 'SurLogic' }: LogoMarkProps) {
+  const classes = ['object-contain', className].filter(Boolean).join(' ');
   return (
-    <svg
-      className={className}
-      viewBox="0 0 200 200"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="16"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      role="img"
-      aria-label={title}
-    >
-      <path d="M48 112 A64 64 0 0 1 146 48" />
-      <path d="M152 88 A64 64 0 0 1 54 152" />
-    </svg>
+    <img
+      className={classes}
+      src="/brand/logo-mark.png"
+      alt={title}
+      width={200}
+      height={200}
+      loading="eager"
+      decoding="async"
+    />
   );
 }

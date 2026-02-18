@@ -1,15 +1,42 @@
 'use client';
 
+import { useEffect, useRef } from 'react';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import { useParams } from 'next/navigation';
 import LogoMark from '@/components/brand/LogoMark';
+import CountUp from '@/components/common/CountUp';
 
 export default function Hero() {
   const t = useTranslations('hero');
   const params = useParams();
   const locale = params.locale as string;
   const stages = [t('stageDiscovery'), t('stageArchitecture'), t('stageSprints'), t('stageLaunch')];
+  const logoParallaxRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    const element = logoParallaxRef.current;
+    if (!element) return;
+
+    let raf = 0;
+    const handleScroll = () => {
+      if (raf) return;
+      raf = requestAnimationFrame(() => {
+        const offset = Math.min(window.scrollY, 400);
+        const x = -offset * 0.05;
+        const y = offset * 0.08;
+        element.style.transform = `translate3d(${x}px, ${y}px, 0)`;
+        raf = 0;
+      });
+    };
+
+    handleScroll();
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      if (raf) cancelAnimationFrame(raf);
+    };
+  }, []);
 
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-navy-950 via-navy-900 to-navy-950 pt-24">
@@ -19,23 +46,53 @@ export default function Hero() {
       <div className="relative max-w-7xl mx-auto px-6 lg:px-8 py-20">
         <div className="grid grid-cols-1 lg:grid-cols-[1.1fr,0.9fr] gap-12 items-center">
           <div className="space-y-8">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm text-blue-200">
+            <div
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm text-blue-200 animate-fade-in-up"
+              style={{ animationDelay: '50ms' }}
+            >
               <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
               {t('badge')}
             </div>
 
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight text-balance">
+            <h1
+              className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight text-balance animate-fade-in-up"
+              style={{ animationDelay: '140ms' }}
+            >
               {t('title')}
             </h1>
 
-            <p className="text-lg sm:text-xl text-gray-300 leading-relaxed max-w-2xl">
+            <p
+              className="text-lg sm:text-xl text-gray-300 leading-relaxed max-w-2xl animate-fade-in-up"
+              style={{ animationDelay: '220ms' }}
+            >
               {t('subtitle')}
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div
+              className="grid grid-cols-2 gap-4 max-w-lg animate-fade-in-up"
+              style={{ animationDelay: '280ms' }}
+            >
+              <div className="rounded-xl bg-white/5 border border-white/10 p-4">
+                <div className="text-xs text-gray-400">{t('metricCostLabel')}</div>
+                <div className="text-2xl font-semibold text-white">
+                  <CountUp end={70} prefix="-" suffix="%" />
+                </div>
+              </div>
+              <div className="rounded-xl bg-white/5 border border-white/10 p-4">
+                <div className="text-xs text-gray-400">{t('metricProjectLabel')}</div>
+                <div className="text-2xl font-semibold text-white">
+                  <CountUp end={1} />
+                </div>
+              </div>
+            </div>
+
+            <div
+              className="flex flex-col sm:flex-row gap-4 animate-fade-in-up"
+              style={{ animationDelay: '360ms' }}
+            >
               <Link
                 href={`/${locale}/contacto`}
-                className="group inline-flex items-center justify-center px-8 py-4 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-500 text-white font-semibold shadow-lg shadow-blue-700/30 hover:translate-y-[-1px] transition-all"
+                className="group btn-sheen inline-flex items-center justify-center px-8 py-4 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-500 text-white font-semibold shadow-lg shadow-blue-700/30 hover:translate-y-[-1px] transition-all"
               >
                 {t('cta')}
                 <svg className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -53,8 +110,13 @@ export default function Hero() {
           </div>
 
           <div className="relative">
-            <div className="absolute -top-10 -right-6 w-40 h-40 text-blue-400/25 animate-logo-drift pointer-events-none">
-              <LogoMark className="w-full h-full animate-logo-reveal" />
+            <div
+              ref={logoParallaxRef}
+              className="absolute -top-28 -right-20 w-[32rem] h-[32rem] pointer-events-none"
+            >
+              <div className="animate-logo-hero">
+                <LogoMark className="w-full h-full opacity-20 animate-logo-reveal logo-hero-glow" />
+              </div>
             </div>
             <div className="absolute inset-0 blur-3xl bg-gradient-to-br from-blue-500/20 via-cyan-500/10 to-purple-500/20" />
             <div className="relative rounded-3xl border border-white/10 bg-white/[0.03] p-8 shadow-2xl shadow-blue-900/30 backdrop-blur">
@@ -74,24 +136,17 @@ export default function Hero() {
                     </div>
                     <div className="h-2 rounded-full bg-white/5 overflow-hidden">
                       <div
-                        className="h-full bg-gradient-to-r from-blue-500 to-indigo-400"
-                        style={{ width: `${25 * (i + 1)}%` }}
+                        className="h-full bg-gradient-to-r from-blue-500 to-indigo-400 progress-bar"
+                        style={{
+                          ['--bar-width' as string]: `${25 * (i + 1)}%`,
+                          animationDelay: `${200 + i * 140}ms`,
+                        }}
                       />
                     </div>
                   </div>
                 ))}
               </div>
 
-              <div className="mt-6 grid grid-cols-2 gap-3">
-                <div className="rounded-xl bg-white/5 border border-white/10 p-4">
-                  <div className="text-xs text-gray-400">{t('metricCostLabel')}</div>
-                  <div className="text-xl font-semibold text-white">-70%</div>
-                </div>
-                <div className="rounded-xl bg-white/5 border border-white/10 p-4">
-                  <div className="text-xs text-gray-400">{t('metricProjectLabel')}</div>
-                  <div className="text-xl font-semibold text-white">1</div>
-                </div>
-              </div>
             </div>
           </div>
         </div>

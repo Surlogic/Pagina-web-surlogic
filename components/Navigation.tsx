@@ -3,6 +3,7 @@
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
+import LogoMark from '@/components/brand/LogoMark';
 
 interface NavigationProps {
   locale: string;
@@ -47,10 +48,12 @@ export default function Navigation({ locale }: NavigationProps) {
             href={`/${locale}`}
             className="flex items-center gap-2 text-xl md:text-2xl font-bold text-white group"
           >
-            <span className="px-2 py-1 rounded-lg bg-white/5 border border-white/10 text-blue-400 group-hover:border-blue-400 transition-colors">
-              Sur
+            <span className="w-8 h-8 text-blue-200 group-hover:text-blue-100 transition-colors">
+              <LogoMark className="w-full h-full" />
             </span>
-            <span className="tracking-tight group-hover:text-gray-100 transition-colors">Logic</span>
+            <span className="tracking-tight text-white group-hover:text-white transition-colors">
+              SurLogic
+            </span>
           </Link>
 
           {/* Desktop Nav */}
@@ -67,7 +70,7 @@ export default function Navigation({ locale }: NavigationProps) {
 
             <Link
               href={`/${locale}/contacto`}
-              className="ml-3 px-5 py-2.5 bg-gradient-to-r from-blue-600 to-indigo-500 text-white text-sm font-semibold rounded-lg shadow-lg shadow-blue-700/30 hover:translate-y-[-1px] transition-all duration-200"
+              className="btn-sheen ml-3 px-5 py-2.5 bg-gradient-to-r from-blue-600 to-indigo-500 text-white text-sm font-semibold rounded-lg shadow-lg shadow-blue-700/30 hover:translate-y-[-1px] transition-all duration-200"
             >
               {t('cta')}
             </Link>
@@ -125,7 +128,7 @@ export default function Navigation({ locale }: NavigationProps) {
             <Link
               href={`/${locale}/contacto`}
               onClick={() => setIsOpen(false)}
-              className="block px-4 py-3 bg-gradient-to-r from-blue-600 to-indigo-500 text-white text-center rounded-lg shadow-lg shadow-blue-700/20 font-semibold"
+              className="btn-sheen block px-4 py-3 bg-gradient-to-r from-blue-600 to-indigo-500 text-white text-center rounded-lg shadow-lg shadow-blue-700/20 font-semibold"
             >
               {t('cta')}
             </Link>

@@ -2,6 +2,7 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 import { createMetadata } from '@/lib/metadata';
 import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
+import Testimonials from '@/components/home/Testimonials';
 
 type PageProps = {
   params: { locale: 'es' | 'en' | 'pt' };
@@ -105,7 +106,7 @@ export default async function CaseStudiesPage({ params }: PageProps) {
             {showContent ? (
               <Link
                 href={`/${params.locale}/contacto`}
-                className="inline-flex items-center px-8 py-4 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-500 text-white font-semibold shadow-lg shadow-blue-700/30 hover:translate-y-[-1px] transition-all"
+                className="btn-sheen inline-flex items-center px-8 py-4 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-500 text-white font-semibold shadow-lg shadow-blue-700/30 hover:translate-y-[-1px] transition-all"
               >
                 {t('otherCta.button')}
               </Link>
@@ -118,6 +119,8 @@ export default async function CaseStudiesPage({ params }: PageProps) {
           </div>
         </div>
       </section>
+
+      <Testimonials />
     </div>
   );
 }

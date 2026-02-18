@@ -105,17 +105,17 @@
       "link": "Explorar Servicio"
     },
     "automation": {
-      "title": "Automatización Empresarial",
+      "title": "Automatización",
       "description": "Eliminamos tareas manuales mediante flujos inteligentes que reducen costos operativos hasta un 75%.",
       "link": "Explorar Servicio"
     },
     "integrations": {
-      "title": "Integraciones Complejas",
+      "title": "Integraciones",
       "description": "Conectamos ecosistemas heterogéneos asegurando sincronización de datos consistente en tiempo real.",
       "link": "Explorar Servicio"
     },
     "applications": {
-      "title": "Aplicaciones Empresariales",
+      "title": "Aplicaciones",
       "description": "Plataformas web y móviles robustas orientadas a productividad, rendimiento y experiencia de usuario.",
       "link": "Explorar Servicio"
     }
@@ -207,8 +207,8 @@
   },
   "customSoftware": {
     "hero": {
-      "title": "Software Empresarial a Medida",
-      "subtitle": "Desarrollamos sistemas específicos que se adaptan exactamente a sus procesos de negocio únicos, sin las limitaciones de soluciones genéricas."
+      "title": "Software a Medida",
+      "subtitle": "Sistemas a medida que se ajustan a sus procesos sin límites de soluciones genéricas."
     },
     "benefits": {
       "title": "Ventajas Competitivas",
@@ -266,8 +266,8 @@
   },
   "automation": {
     "hero": {
-      "title": "Automatización que Libera Recursos Estratégicos",
-      "subtitle": "Eliminamos procesos manuales repetitivos mediante flujos de trabajo inteligentes que reducen errores, aceleran operaciones y permiten enfoque en tareas de alto valor."
+      "title": "Automatización",
+      "subtitle": "Automatizamos procesos para reducir errores, acelerar operaciones y liberar tiempo."
     },
     "impact": {
       "title": "Impacto Operativo Comprobado",
@@ -339,8 +339,8 @@
   },
   "integrations": {
     "hero": {
-      "title": "Integraciones que Unifican Ecosistemas",
-      "subtitle": "Conectamos sistemas dispares en una arquitectura coherente que garantiza flujo de datos consistente, elimina silos de información y habilita visibilidad operativa completa."
+      "title": "Integraciones",
+      "subtitle": "Conectamos sistemas para unificar datos, eliminar silos y dar visibilidad total."
     },
     "challenges": {
       "title": "Desafíos que Resolvemos",
@@ -418,8 +418,8 @@
   },
   "applications": {
     "hero": {
-      "title": "Aplicaciones que Impulsan Productividad",
-      "subtitle": "Desarrollamos plataformas web y móviles robustas centradas en experiencia de usuario, rendimiento y arquitectura escalable para operaciones críticas."
+      "title": "Aplicaciones",
+      "subtitle": "Apps web y móviles enfocadas en UX, rendimiento y escalabilidad."
     },
     "focus": {
       "title": "Pilares de Desarrollo",

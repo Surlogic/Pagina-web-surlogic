@@ -105,17 +105,17 @@
       "link": "Explore Service"
     },
     "automation": {
-      "title": "Enterprise Automation",
+      "title": "Automation",
       "description": "We eliminate manual tasks through intelligent workflows that reduce operational costs by up to 75%.",
       "link": "Explore Service"
     },
     "integrations": {
-      "title": "Complex Integrations",
+      "title": "Integrations",
       "description": "We connect heterogeneous ecosystems ensuring consistent real-time data synchronization.",
       "link": "Explore Service"
     },
     "applications": {
-      "title": "Enterprise Applications",
+      "title": "Applications",
       "description": "Robust web and mobile platforms focused on productivity, performance, and user experience.",
       "link": "Explore Service"
     }
@@ -207,8 +207,8 @@
   },
   "customSoftware": {
     "hero": {
-      "title": "Custom Enterprise Software",
-      "subtitle": "We develop purpose-built systems that adapt precisely to your unique business processes, without the limitations of generic solutions."
+      "title": "Custom Software",
+      "subtitle": "Purpose-built systems that fit your processes without generic limitations."
     },
     "benefits": {
       "title": "Competitive Advantages",
@@ -266,8 +266,8 @@
   },
   "automation": {
     "hero": {
-      "title": "Automation That Frees Strategic Resources",
-      "subtitle": "We eliminate repetitive manual processes through intelligent workflows that reduce errors, accelerate operations, and allow your team to focus on high-value tasks."
+      "title": "Automation",
+      "subtitle": "Automations that cut errors, speed operations, and free your team."
     },
     "impact": {
       "title": "Proven Operational Impact",
@@ -339,8 +339,8 @@
   },
   "integrations": {
     "hero": {
-      "title": "Integrations That Unify Ecosystems",
-      "subtitle": "We connect disparate systems into a coherent architecture that ensures consistent data flow, eliminates information silos, and enables complete operational visibility."
+      "title": "Integrations",
+      "subtitle": "Unified systems with consistent data flow, no silos, full visibility."
     },
     "challenges": {
       "title": "Challenges We Solve",
@@ -418,8 +418,8 @@
   },
   "applications": {
     "hero": {
-      "title": "Applications That Drive Productivity",
-      "subtitle": "We develop robust web and mobile platforms centered on user experience, performance, and scalable architecture for mission-critical operations."
+      "title": "Applications",
+      "subtitle": "Web and mobile apps focused on UX, performance, and scalability."
     },
     "focus": {
       "title": "Development Pillars",

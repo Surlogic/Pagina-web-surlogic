@@ -1,6 +1,7 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
+import Reveal from '@/components/common/Reveal';
 
 export default function Problems() {
   const t = useTranslations('problems');
@@ -49,37 +50,36 @@ export default function Problems() {
   ];
 
   return (
-    <section className="py-24 bg-navy-900 relative overflow-hidden">
+    <Reveal as="section" className="py-24 bg-navy-900 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-navy-950/60 via-transparent to-navy-950/40" />
 
       <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="text-center mb-14">
+        <Reveal className="text-center mb-14" delay={100}>
           <div className="inline-flex items-center gap-2 mb-4 px-4 py-1.5 rounded-full text-sm font-medium text-red-200 bg-red-500/10 border border-red-500/20">
             {t('badge')}
           </div>
           <h2 className="text-3xl md:text-5xl font-bold text-white mb-4 text-balance">{t('title')}</h2>
           <p className="text-lg text-gray-400 max-w-3xl mx-auto">{t('subtitle')}</p>
-        </div>
+        </Reveal>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {problems.map((problem, index) => (
-            <div
-              key={index}
-              className="relative group rounded-2xl border border-white/8 bg-white/[0.03] p-8 overflow-hidden hover:border-white/15 transition-colors"
-            >
-              <div className={`absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-br ${problem.gradient}`} />
+            <Reveal key={index} delay={index * 120}>
+              <div className="relative group rounded-2xl border border-white/8 bg-white/[0.03] p-8 overflow-hidden hover:border-white/15 transition-colors">
+                <div className={`absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-br ${problem.gradient}`} />
 
-              <div className="relative space-y-3">
-                <div className="w-11 h-11 rounded-xl bg-white/8 border border-white/10 flex items-center justify-center text-red-300 group-hover:scale-105 transition-transform">
-                  {problem.icon}
+                <div className="relative space-y-3">
+                  <div className="w-11 h-11 rounded-xl bg-white/8 border border-white/10 flex items-center justify-center text-red-300 group-hover:scale-105 transition-transform">
+                    {problem.icon}
+                  </div>
+                  <h3 className="text-xl font-semibold text-white">{problem.title}</h3>
+                  <p className="text-gray-300 leading-relaxed text-sm">{problem.description}</p>
                 </div>
-                <h3 className="text-xl font-semibold text-white">{problem.title}</h3>
-                <p className="text-gray-300 leading-relaxed text-sm">{problem.description}</p>
               </div>
-            </div>
+            </Reveal>
           ))}
         </div>
       </div>
-    </section>
+    </Reveal>
   );
 }

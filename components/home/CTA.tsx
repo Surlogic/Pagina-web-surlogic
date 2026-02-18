@@ -3,6 +3,7 @@
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import { useParams } from 'next/navigation';
+import Reveal from '@/components/common/Reveal';
 
 export default function CTA() {
   const t = useTranslations('cta');
@@ -10,7 +11,7 @@ export default function CTA() {
   const locale = params.locale as string;
 
   return (
-    <section className="py-24 relative overflow-hidden">
+    <Reveal as="section" className="py-24 relative overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-blue-900/40 via-navy-950 to-purple-900/20" />
       <div className="absolute inset-0 bg-navy-950/60" />
@@ -30,7 +31,7 @@ export default function CTA() {
         <div className="flex flex-col items-center gap-4">
           <Link
             href={`/${locale}/contacto`}
-            className="group inline-flex items-center px-10 py-5 bg-blue-600 text-white text-lg font-semibold rounded-xl hover:bg-blue-500 transition-all duration-300 shadow-lg shadow-blue-600/25 hover:shadow-blue-500/40 hover:scale-[1.02] active:scale-[0.98]"
+            className="group btn-sheen inline-flex items-center px-10 py-5 bg-blue-600 text-white text-lg font-semibold rounded-xl hover:bg-blue-500 transition-all duration-300 shadow-lg shadow-blue-600/25 hover:shadow-blue-500/40 hover:scale-[1.02] active:scale-[0.98]"
           >
             {t('button')}
             <svg className="w-5 h-5 ml-3 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -41,6 +42,6 @@ export default function CTA() {
           <p className="text-sm text-gray-500">{t('note')}</p>
         </div>
       </div>
-    </section>
+    </Reveal>
   );
 }
