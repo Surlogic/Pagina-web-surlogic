@@ -21,9 +21,9 @@ export default function Navigation({ locale }: NavigationProps) {
   }, []);
 
   const locales = [
-    { code: 'es', label: 'ES' },
-    { code: 'en', label: 'EN' },
-    { code: 'pt', label: 'PT' },
+    { code: 'es', label: 'ES', flag: '🇪🇸' },
+    { code: 'en', label: 'EN', flag: '🇺🇸' },
+    { code: 'pt', label: 'PT', flag: '🇵🇹' },
   ];
 
   const navLinks = [
@@ -81,13 +81,16 @@ export default function Navigation({ locale }: NavigationProps) {
                 <Link
                   key={loc.code}
                   href={`/${loc.code}`}
-                  className={`px-3 py-1.5 text-xs font-semibold rounded-md transition-all duration-200 ${
+                  className={`inline-flex items-center gap-2 px-3 py-1.5 text-xs font-semibold rounded-md transition-all duration-200 ${
                     locale === loc.code
                       ? 'bg-white/[0.12] text-white border border-white/20'
                       : 'text-gray-500 hover:text-gray-200 hover:bg-white/[0.05]'
                   }`}
                 >
-                  {loc.label}
+                  <span className="text-sm leading-none" aria-hidden="true">
+                    {loc.flag}
+                  </span>
+                  <span>{loc.label}</span>
                 </Link>
               ))}
             </div>
@@ -139,13 +142,16 @@ export default function Navigation({ locale }: NavigationProps) {
                   key={loc.code}
                   href={`/${loc.code}`}
                   onClick={() => setIsOpen(false)}
-                  className={`flex-1 px-4 py-2 text-sm rounded-lg text-center ${
+                  className={`flex-1 px-4 py-2 text-sm rounded-lg text-center inline-flex items-center justify-center gap-2 ${
                     locale === loc.code
                       ? 'bg-white/[0.1] text-white border border-white/15'
                       : 'text-gray-400 hover:text-white hover:bg-white/[0.05]'
                   }`}
                 >
-                  {loc.label}
+                  <span className="text-base leading-none" aria-hidden="true">
+                    {loc.flag}
+                  </span>
+                  <span>{loc.label}</span>
                 </Link>
               ))}
             </div>
