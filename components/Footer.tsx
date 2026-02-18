@@ -50,7 +50,7 @@ export default function Footer() {
               <a
                 href="mailto:admin@surlogicuy.com"
                 className="inline-flex items-center justify-center w-10 h-10 rounded-lg border border-blue-400/60 bg-blue-500/25 text-blue-50 hover:bg-blue-500/40 transition-colors"
-                aria-label="Email"
+                aria-label={t('ariaEmail')}
               >
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
@@ -61,7 +61,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex items-center justify-center w-10 h-10 rounded-lg border border-emerald-400/60 bg-emerald-500/25 text-emerald-50 hover:bg-emerald-500/40 transition-colors"
-                aria-label="WhatsApp"
+                aria-label={t('ariaWhatsapp')}
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <path d="M16.7 13.4c-.3-.1-1.8-.9-2.1-1-.3-.1-.5-.1-.7.1-.2.2-.8 1-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.8-.7-1.4-1.6-1.6-1.9-.2-.3 0-.4.1-.5.2-.2.3-.3.4-.4.2-.2.2-.3.3-.5.1-.2.1-.3 0-.5-.1-.1-.7-1.7-.9-2.3-.2-.5-.5-.5-.7-.5h-.6c-.2 0-.5.1-.7.3-.2.2-.9.8-.9 2 0 1.2.9 2.3 1 2.5.1.2 1.8 2.8 4.3 3.9.6.3 1 .5 1.4.6.6.2 1.1.2 1.5.1.5-.1 1.8-.7 2.1-1.4.3-.7.3-1.3.2-1.4-.1-.2-.2-.2-.5-.3z" />
@@ -72,7 +72,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex items-center justify-center w-10 h-10 rounded-lg border border-fuchsia-400/60 bg-fuchsia-500/25 text-fuchsia-50 hover:bg-fuchsia-500/40 transition-colors"
-                aria-label="Instagram"
+                aria-label={t('ariaInstagram')}
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <path d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5zm10 2H7a3 3 0 00-3 3v10a3 3 0 003 3h10a3 3 0 003-3V7a3 3 0 00-3-3zm-5 3.5A5.5 5.5 0 1112 18a5.5 5.5 0 010-11zm0 2A3.5 3.5 0 1015.5 13 3.5 3.5 0 0012 9.5zm6-2.25a1.25 1.25 0 11-1.25 1.25A1.25 1.25 0 0118 7.25z" />
@@ -83,7 +83,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex items-center justify-center w-10 h-10 rounded-lg border border-sky-400/60 bg-sky-500/25 text-sky-50 hover:bg-sky-500/40 transition-colors"
-                aria-label="LinkedIn"
+                aria-label={t('ariaLinkedin')}
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <path d="M4.98 3.5a2.5 2.5 0 11-.02 5 2.5 2.5 0 01.02-5zM3 8.98h3.96V21H3zM9.5 8.98H13v1.64h.05a3.84 3.84 0 013.46-1.9c3.7 0 4.38 2.43 4.38 5.58V21H16.9v-5.7c0-1.36-.02-3.1-1.9-3.1-1.9 0-2.19 1.48-2.19 3v5.8H9.5z" />

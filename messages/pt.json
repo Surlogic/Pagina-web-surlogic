@@ -5,21 +5,74 @@
     "caseStudies": "Casos de Sucesso",
     "about": "Sobre Nós",
     "contact": "Contato",
-    "cta": "Falar com um Especialista"
+    "cta": "Falar com um Especialista",
+    "menuLabel": "Menu"
+  },
+  "meta": {
+    "site": {
+      "title": "SurLogic — Soluções de Software Empresarial",
+      "description": "Soluções de software empresarial, automações e integrações para operações críticas."
+    },
+    "home": {
+      "title": "SurLogic — Soluções de Software Empresarial",
+      "description": "Software sob medida, automação e integrações críticas para empresas em crescimento."
+    },
+    "services": {
+      "title": "SurLogic — Serviços",
+      "description": "Serviços estratégicos: software sob medida, automação, integrações e aplicações empresariais."
+    },
+    "customSoftware": {
+      "title": "SurLogic — Software Sob Medida",
+      "description": "Sistemas empresariais sob medida com arquitetura escalável e sem dependência de fornecedor."
+    },
+    "automation": {
+      "title": "SurLogic — Automação Empresarial",
+      "description": "Automação empresarial que reduz tempo e erros em operações críticas."
+    },
+    "integrations": {
+      "title": "SurLogic — Integrações",
+      "description": "Integrações que unificam ecossistemas e eliminam silos de informação."
+    },
+    "applications": {
+      "title": "SurLogic — Aplicações Empresariais",
+      "description": "Aplicações web e móveis focadas em produtividade, desempenho e experiência do usuário."
+    },
+    "about": {
+      "title": "SurLogic — Sobre Nós",
+      "description": "Equipe de engenharia que entrega software crítico com impacto nos negócios."
+    },
+    "caseStudies": {
+      "title": "SurLogic — Casos de Sucesso",
+      "description": "Casos reais de transformação digital com impacto mensurável."
+    },
+    "contact": {
+      "title": "SurLogic — Contato",
+      "description": "Agende uma conversa estratégica para avaliar seu projeto tecnológico."
+    }
   },
   "hero": {
     "title": "Transformamos operações empresariais em vantagens competitivas",
     "subtitle": "Projetamos e implementamos sistemas empresariais, automações inteligentes e integrações complexas que reduzem custos operacionais em até 70% e aceleram o crescimento de médias e grandes empresas.",
     "cta": "Agendar Consultoria Gratuita",
     "ctaSecondary": "Ver Casos de Sucesso",
-    "metric1": "+50",
-    "metric1Label": "Projetos Entregues",
+    "badge": "Impacto Empresarial",
+    "snapshotTitle": "Resumo de Entrega",
+    "slaBadge": "99% SLA",
+    "stageDiscovery": "Discovery",
+    "stageArchitecture": "Arquitetura",
+    "stageSprints": "Sprints",
+    "stageLaunch": "Lançamento",
+    "weekLabel": "Semana {number}",
+    "metric1": "1",
+    "metric1Label": "Projeto em andamento",
     "metric2": "70%",
     "metric2Label": "Redução de Custos",
     "metric3": "+12",
     "metric3Label": "Equipe Especializada",
     "metric4": "98%",
-    "metric4Label": "Retenção de Clientes"
+    "metric4Label": "Retenção de Clientes",
+    "metricCostLabel": "Redução média de custos",
+    "metricProjectLabel": "Projeto em andamento"
   },
   "problems": {
     "badge": "Dores",
@@ -70,7 +123,9 @@
   "methodology": {
     "badge": "Processo",
     "title": "Como Trabalhamos",
-    "subtitle": "Um processo comprovado em +50 projetos que garante entregas previsíveis e resultados mensuráveis",
+    "subtitle": "Um processo claro e transparente que estamos aprimorando no nosso primeiro projeto para garantir entregas previsíveis e resultados mensuráveis",
+    "stepLabel": "Etapa {number}",
+    "slaReady": "Pronto para SLA",
     "step1": {
       "title": "Discovery & Estratégia",
       "description": "Imersão em suas operações, mapeamento de processos, identificação de gargalos e definição de objetivos mensuráveis com KPIs claros."
@@ -96,6 +151,14 @@
     "badge": "Depoimentos",
     "title": "O que dizem nossos clientes",
     "subtitle": "Empresas que confiaram em nós para transformar suas operações",
+    "wipBadge": "Em andamento",
+    "wipTitle": "Depoimentos em andamento",
+    "wipSubtitle": "Estamos trabalhando em novas avaliações para estes setores.",
+    "wipContent": "Estamos trabalhando neste depoimento. Em breve compartilharemos a experiência completa.",
+    "wipName": "Cliente",
+    "wipPosition": "Cargo",
+    "wipCompany": "Setor",
+    "wipInitials": "WIP",
     "item1": {
       "content": "A automação que implementaram reduziu nossos tempos de processamento em 70%. A equipe entendeu perfeitamente nossas necessidades desde o primeiro dia.",
       "name": "María González",
@@ -136,7 +199,11 @@
     "privacy": "Política de Privacidade",
     "terms": "Termos de Serviço",
     "rights": "Todos os direitos reservados",
-    "location": "Montevideo, Uruguay"
+    "location": "Montevideo, Uruguay",
+    "ariaEmail": "Email",
+    "ariaWhatsapp": "WhatsApp",
+    "ariaInstagram": "Instagram",
+    "ariaLinkedin": "LinkedIn"
   },
   "customSoftware": {
     "hero": {
@@ -428,8 +495,16 @@
   "caseStudies": {
     "hero": {
       "title": "Resultados que Falam por Si Mesmos",
-      "subtitle": "Casos reais de transformação digital. Problemas concretos, soluções mensuráveis, impacto verificável."
+      "subtitle": "Casos reais de transformação digital. Problemas concretos, soluções mensuráveis, impacto verificável.",
+      "badge": "Entrega guiada por KPIs"
     },
+    "wipBadge": "Em andamento",
+    "wipTitle": "Casos de sucesso em andamento",
+    "wipSubtitle": "Estamos trabalhando em casos reais para estes setores. Em breve compartilharemos os detalhes.",
+    "wipLabel": "Em andamento",
+    "wipBody": "Estamos trabalhando neste caso de sucesso para este setor. Em breve publicaremos os detalhes.",
+    "wipResult": "Em breve",
+    "caseNumber": "Caso {current}/{total}",
     "case1": {
       "client": "Empresa Logística Regional",
       "industry": "Logística e Distribuição",
@@ -540,7 +615,8 @@
       "submit": "Enviar Consulta",
       "sending": "Enviando...",
       "success": "Mensagem enviada com sucesso. Entraremos em contato em menos de 24 horas.",
-      "error": "Erro ao enviar. Tente novamente ou escreva-nos diretamente."
+      "error": "Erro ao enviar. Tente novamente ou escreva-nos diretamente.",
+      "whatsappMessage": "Olá SurLogic, quero conversar sobre um projeto tecnológico."
     },
     "info": {
       "title": "Informações de Contato",

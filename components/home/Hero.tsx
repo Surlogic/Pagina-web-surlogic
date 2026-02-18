@@ -8,6 +8,7 @@ export default function Hero() {
   const t = useTranslations('hero');
   const params = useParams();
   const locale = params.locale as string;
+  const stages = [t('stageDiscovery'), t('stageArchitecture'), t('stageSprints'), t('stageLaunch')];
 
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-navy-950 via-navy-900 to-navy-950 pt-24">
@@ -19,7 +20,7 @@ export default function Hero() {
           <div className="space-y-8">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm text-blue-200">
               <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-              Enterprise Impact
+              {t('badge')}
             </div>
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight text-balance">
@@ -54,18 +55,18 @@ export default function Hero() {
             <div className="absolute inset-0 blur-3xl bg-gradient-to-br from-blue-500/20 via-cyan-500/10 to-purple-500/20" />
             <div className="relative rounded-3xl border border-white/10 bg-white/[0.03] p-8 shadow-2xl shadow-blue-900/30 backdrop-blur">
               <div className="flex items-center justify-between mb-6">
-                <div className="text-white font-semibold">Delivery Snapshot</div>
+                <div className="text-white font-semibold">{t('snapshotTitle')}</div>
                 <span className="text-xs text-emerald-400 bg-emerald-500/10 px-3 py-1 rounded-full">
-                  99% SLA
+                  {t('slaBadge')}
                 </span>
               </div>
 
               <div className="space-y-4">
-                {['Discovery', 'Architecture', 'Sprints', 'Launch'].map((stage, i) => (
+                {stages.map((stage, i) => (
                   <div key={stage} className="space-y-2">
                     <div className="flex items-center justify-between text-sm text-gray-300">
                       <span>{stage}</span>
-                      <span className="text-gray-500">Week {i + 1}</span>
+                      <span className="text-gray-500">{t('weekLabel', { number: i + 1 })}</span>
                     </div>
                     <div className="h-2 rounded-full bg-white/5 overflow-hidden">
                       <div
@@ -79,12 +80,12 @@ export default function Hero() {
 
               <div className="mt-6 grid grid-cols-2 gap-3">
                 <div className="rounded-xl bg-white/5 border border-white/10 p-4">
-                  <div className="text-xs text-gray-400">Avg. Cost Reduction</div>
+                  <div className="text-xs text-gray-400">{t('metricCostLabel')}</div>
                   <div className="text-xl font-semibold text-white">-70%</div>
                 </div>
                 <div className="rounded-xl bg-white/5 border border-white/10 p-4">
-                  <div className="text-xs text-gray-400">Projects Delivered</div>
-                  <div className="text-xl font-semibold text-white">50+</div>
+                  <div className="text-xs text-gray-400">{t('metricProjectLabel')}</div>
+                  <div className="text-xl font-semibold text-white">1</div>
                 </div>
               </div>
             </div>

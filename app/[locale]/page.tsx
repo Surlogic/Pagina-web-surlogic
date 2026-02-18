@@ -1,6 +1,6 @@
 import { createMetadata } from '@/lib/metadata';
 import type { Metadata } from 'next';
-import { unstable_setRequestLocale } from 'next-intl/server';
+import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
 import Hero from '@/components/home/Hero';
 import Problems from '@/components/home/Problems';
 import Services from '@/components/home/Services';
@@ -14,10 +14,11 @@ type PageProps = {
 };
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const t = await getTranslations({ locale: params.locale, namespace: 'meta' });
   return createMetadata({
     locale: params.locale,
-    title: 'SurLogic — Enterprise Software Solutions',
-    description: 'Software a medida, automatización e integraciones críticas para empresas en crecimiento.',
+    title: t('home.title'),
+    description: t('home.description'),
     path: `/${params.locale}`,
   });
 }

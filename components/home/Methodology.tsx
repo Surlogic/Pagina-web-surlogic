@@ -33,9 +33,9 @@ export default function Methodology() {
             >
               <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-emerald-500 to-blue-500" />
               <div className="flex items-center justify-between mb-4">
-                <span className="text-xs text-gray-400">Step {step.label}</span>
+                <span className="text-xs text-gray-400">{t('stepLabel', { number: step.label })}</span>
                 <span className="text-sm text-emerald-300 bg-emerald-500/10 px-3 py-1 rounded-full border border-emerald-500/20">
-                  SLA Ready
+                  {t('slaReady')}
                 </span>
               </div>
               <h3 className="text-xl font-semibold text-white mb-3">{step.title}</h3>

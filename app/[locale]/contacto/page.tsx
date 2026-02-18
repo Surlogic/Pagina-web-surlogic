@@ -6,10 +6,11 @@ import { ContactForm } from '@/components/contact/ContactForm';
 type PageProps = { params: { locale: 'es' | 'en' | 'pt' } };
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const t = await getTranslations({ locale: params.locale, namespace: 'meta' });
   return createMetadata({
     locale: params.locale,
-    title: 'SurLogic — Contact',
-    description: 'Agenda una conversación estratégica para evaluar tu proyecto tecnológico.',
+    title: t('contact.title'),
+    description: t('contact.description'),
     path: `/${params.locale}/contacto`,
   });
 }
@@ -54,7 +55,6 @@ export default async function ContactPage({ params }: PageProps) {
             </div>
 
             <ContactForm
-              locale={params.locale}
               strings={{
                 name: t('form.name'),
                 email: t('form.email'),
@@ -73,6 +73,7 @@ export default async function ContactPage({ params }: PageProps) {
                 success: t('form.success'),
                 error: t('form.error'),
                 whatsapp: t('info.whatsapp'),
+                whatsappMessage: t('form.whatsappMessage'),
               }}
             />
           </div>

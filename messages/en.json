@@ -5,21 +5,74 @@
     "caseStudies": "Case Studies",
     "about": "About Us",
     "contact": "Contact",
-    "cta": "Talk to an Expert"
+    "cta": "Talk to an Expert",
+    "menuLabel": "Menu"
+  },
+  "meta": {
+    "site": {
+      "title": "SurLogic — Enterprise Software Solutions",
+      "description": "Enterprise software, automations, and integrations for mission-critical operations."
+    },
+    "home": {
+      "title": "SurLogic — Enterprise Software Solutions",
+      "description": "Custom software, automation, and critical integrations for growing companies."
+    },
+    "services": {
+      "title": "SurLogic — Services",
+      "description": "Strategic services: custom software, automation, integrations, and enterprise applications."
+    },
+    "customSoftware": {
+      "title": "SurLogic — Custom Software",
+      "description": "Custom enterprise systems with scalable architecture and no vendor lock-in."
+    },
+    "automation": {
+      "title": "SurLogic — Enterprise Automation",
+      "description": "Enterprise automation that reduces time and errors in critical operations."
+    },
+    "integrations": {
+      "title": "SurLogic — Integrations",
+      "description": "Integrations that unify ecosystems and eliminate information silos."
+    },
+    "applications": {
+      "title": "SurLogic — Enterprise Applications",
+      "description": "Web and mobile applications focused on productivity, performance, and user experience."
+    },
+    "about": {
+      "title": "SurLogic — About",
+      "description": "Engineering team delivering mission-critical software with business impact."
+    },
+    "caseStudies": {
+      "title": "SurLogic — Case Studies",
+      "description": "Real digital transformation cases with measurable impact."
+    },
+    "contact": {
+      "title": "SurLogic — Contact",
+      "description": "Schedule a strategic conversation to evaluate your technology project."
+    }
   },
   "hero": {
     "title": "We transform business operations into competitive advantages",
     "subtitle": "We design and implement enterprise systems, intelligent automations, and complex integrations that reduce operational costs by up to 70% and accelerate growth for mid-size and large companies.",
     "cta": "Schedule a Free Consultation",
     "ctaSecondary": "View Case Studies",
-    "metric1": "+50",
-    "metric1Label": "Projects Delivered",
+    "badge": "Enterprise Impact",
+    "snapshotTitle": "Delivery Snapshot",
+    "slaBadge": "99% SLA",
+    "stageDiscovery": "Discovery",
+    "stageArchitecture": "Architecture",
+    "stageSprints": "Sprints",
+    "stageLaunch": "Launch",
+    "weekLabel": "Week {number}",
+    "metric1": "1",
+    "metric1Label": "Project in Progress",
     "metric2": "70%",
     "metric2Label": "Cost Reduction",
     "metric3": "+12",
     "metric3Label": "Specialized Team",
     "metric4": "98%",
-    "metric4Label": "Client Retention"
+    "metric4Label": "Client Retention",
+    "metricCostLabel": "Avg. Cost Reduction",
+    "metricProjectLabel": "Project in Progress"
   },
   "problems": {
     "badge": "Pain points",
@@ -70,7 +123,9 @@
   "methodology": {
     "badge": "Process",
     "title": "How We Work",
-    "subtitle": "A process proven across 50+ projects that ensures predictable deliveries and measurable results",
+    "subtitle": "A clear, transparent process we are refining in our first project to ensure predictable deliveries and measurable results",
+    "stepLabel": "Step {number}",
+    "slaReady": "SLA Ready",
     "step1": {
       "title": "Discovery & Strategy",
       "description": "Deep immersion into your operations, process mapping, bottleneck identification, and definition of measurable objectives with clear KPIs."
@@ -96,6 +151,14 @@
     "badge": "Testimonials",
     "title": "What our clients say",
     "subtitle": "Companies that trusted us to transform their operations",
+    "wipBadge": "In progress",
+    "wipTitle": "Testimonials in progress",
+    "wipSubtitle": "We're working on new reviews for these sectors.",
+    "wipContent": "We're working on this testimonial. Full details coming soon.",
+    "wipName": "Client",
+    "wipPosition": "Role",
+    "wipCompany": "Sector",
+    "wipInitials": "WIP",
     "item1": {
       "content": "The automation they implemented reduced our processing times by 70%. The team understood our needs perfectly from day one.",
       "name": "María González",
@@ -136,7 +199,11 @@
     "privacy": "Privacy Policy",
     "terms": "Terms of Service",
     "rights": "All rights reserved",
-    "location": "Montevideo, Uruguay"
+    "location": "Montevideo, Uruguay",
+    "ariaEmail": "Email",
+    "ariaWhatsapp": "WhatsApp",
+    "ariaInstagram": "Instagram",
+    "ariaLinkedin": "LinkedIn"
   },
   "customSoftware": {
     "hero": {
@@ -428,8 +495,16 @@
   "caseStudies": {
     "hero": {
       "title": "Results That Speak for Themselves",
-      "subtitle": "Real digital transformation cases. Concrete problems, measurable solutions, verifiable impact."
+      "subtitle": "Real digital transformation cases. Concrete problems, measurable solutions, verifiable impact.",
+      "badge": "KPI-Driven Delivery"
     },
+    "wipBadge": "In progress",
+    "wipTitle": "Case studies in progress",
+    "wipSubtitle": "We're working on real stories for these sectors. Full details coming soon.",
+    "wipLabel": "In progress",
+    "wipBody": "We're working on this case study for this sector. Full details soon.",
+    "wipResult": "Coming soon",
+    "caseNumber": "Case {current}/{total}",
     "case1": {
       "client": "Regional Logistics Company",
       "industry": "Logistics & Distribution",
@@ -540,7 +615,8 @@
       "submit": "Submit Inquiry",
       "sending": "Sending...",
       "success": "Message sent successfully. We will contact you within 24 hours.",
-      "error": "Failed to send. Please try again or contact us directly."
+      "error": "Failed to send. Please try again or contact us directly.",
+      "whatsappMessage": "Hi SurLogic, I'd like to talk about a technology project."
     },
     "info": {
       "title": "Contact Information",

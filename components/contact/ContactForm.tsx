@@ -21,14 +21,14 @@ type FormStrings = {
   success: string;
   error: string;
   whatsapp: string;
+  whatsappMessage: string;
 };
 
 type ContactFormProps = {
-  locale: string;
   strings: FormStrings;
 };
 
-export function ContactForm({ locale, strings }: ContactFormProps) {
+export function ContactForm({ strings }: ContactFormProps) {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -61,9 +61,7 @@ export function ContactForm({ locale, strings }: ContactFormProps) {
     }
   };
 
-  const whatsappLink = `https://wa.me/59891488400?text=${encodeURIComponent(
-    'Hola SurLogic, quiero conversar sobre un proyecto tecnológico.'
-  )}`;
+  const whatsappLink = `https://wa.me/59891488400?text=${encodeURIComponent(strings.whatsappMessage)}`;
 
   return (
     <form onSubmit={handleSubmit} className="space-y-6">

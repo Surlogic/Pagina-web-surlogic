@@ -94,7 +94,7 @@ export default function Navigation({ locale }: NavigationProps) {
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="md:hidden w-11 h-11 flex items-center justify-center rounded-lg border border-white/10 bg-white/5 hover:bg-white/[0.08] transition-colors"
-            aria-label="Menu"
+            aria-label={t('menuLabel')}
           >
             <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               {isOpen ? (

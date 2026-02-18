@@ -6,10 +6,11 @@ import { createMetadata } from '@/lib/metadata';
 type PageProps = { params: { locale: 'es' | 'en' | 'pt' } };
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const t = await getTranslations({ locale: params.locale, namespace: 'meta' });
   return createMetadata({
     locale: params.locale,
-    title: 'SurLogic — Services',
-    description: 'Servicios estratégicos: software a medida, automatización, integraciones y aplicaciones empresariales.',
+    title: t('services.title'),
+    description: t('services.description'),
     path: `/${params.locale}/servicios`,
   });
 }

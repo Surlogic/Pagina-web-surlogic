@@ -5,10 +5,11 @@ import { createMetadata } from '@/lib/metadata';
 type PageProps = { params: { locale: 'es' | 'en' | 'pt' } };
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const t = await getTranslations({ locale: params.locale, namespace: 'meta' });
   return createMetadata({
     locale: params.locale,
-    title: 'SurLogic — Custom Software',
-    description: 'Sistemas empresariales a medida con arquitectura escalable y sin vendor lock-in.',
+    title: t('customSoftware.title'),
+    description: t('customSoftware.description'),
     path: `/${params.locale}/servicios/software-a-medida`,
   });
 }

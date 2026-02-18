@@ -4,6 +4,18 @@ import { useTranslations } from 'next-intl';
 
 export default function Testimonials() {
   const t = useTranslations('testimonials');
+  const showContent = false;
+  const cardSurface = 'border border-white/8 bg-white/[0.03]';
+  const wip = {
+    badge: t('wipBadge'),
+    title: t('wipTitle'),
+    subtitle: t('wipSubtitle'),
+    content: t('wipContent'),
+    name: t('wipName'),
+    position: t('wipPosition'),
+    company: t('wipCompany'),
+    initials: t('wipInitials'),
+  };
 
   const testimonials = [
     {
@@ -37,17 +49,21 @@ export default function Testimonials() {
       <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
         <div className="text-center mb-14">
           <div className="inline-flex items-center gap-2 mb-4 px-4 py-1.5 rounded-full text-sm font-medium text-purple-200 bg-purple-500/10 border border-purple-500/20">
-            {t('badge')}
+            {showContent ? t('badge') : wip.badge}
           </div>
-          <h2 className="text-3xl md:text-5xl font-bold text-white mb-4 text-balance">{t('title')}</h2>
-          <p className="text-lg text-gray-400 max-w-3xl mx-auto">{t('subtitle')}</p>
+          <h2 className="text-3xl md:text-5xl font-bold text-white mb-4 text-balance">
+            {showContent ? t('title') : wip.title}
+          </h2>
+          <p className="text-lg text-gray-400 max-w-3xl mx-auto">
+            {showContent ? t('subtitle') : wip.subtitle}
+          </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="group relative p-8 rounded-2xl border border-white/8 bg-white/[0.03] hover:border-purple-400/30 transition-colors"
+              className={`group relative p-8 rounded-2xl ${cardSurface} hover:border-white/15 transition-colors`}
             >
               <div className="absolute top-6 right-6 text-purple-500/10 group-hover:text-purple-400/20 transition-colors">
                 <svg className="w-10 h-10" fill="currentColor" viewBox="0 0 24 24">
@@ -55,16 +71,24 @@ export default function Testimonials() {
                 </svg>
               </div>
 
-              <p className="text-gray-200 mb-6 leading-relaxed">“{testimonial.content}”</p>
+              <p className="text-gray-200 mb-6 leading-relaxed">
+                {showContent ? `“${testimonial.content}”` : wip.content}
+              </p>
 
               <div className="flex items-center gap-4 pt-6 border-t border-white/8">
                 <div className="w-11 h-11 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-white text-sm font-bold flex-shrink-0">
-                  {testimonial.initials}
+                  {showContent ? testimonial.initials : wip.initials}
                 </div>
                 <div>
-                  <p className="text-white font-semibold text-sm">{testimonial.name}</p>
-                  <p className="text-gray-400 text-xs">{testimonial.position}</p>
-                  <p className="text-blue-300 text-xs mt-0.5">{testimonial.company}</p>
+                  <p className="text-white font-semibold text-sm">
+                    {showContent ? testimonial.name : wip.name}
+                  </p>
+                  <p className="text-gray-400 text-xs">
+                    {showContent ? testimonial.position : wip.position}
+                  </p>
+                  <p className="text-blue-300 text-xs mt-0.5">
+                    {showContent ? testimonial.company : wip.company}
+                  </p>
                 </div>
               </div>
             </div>
