@@ -18,6 +18,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 export default async function ContactPage({ params }: PageProps) {
   unstable_setRequestLocale(params.locale);
   const t = await getTranslations({ locale: params.locale, namespace: 'contact' });
+  const nav = await getTranslations({ locale: params.locale, namespace: 'nav' });
 
   const infoStrings = {
     title: t('info.title'),
@@ -40,17 +41,20 @@ export default async function ContactPage({ params }: PageProps) {
   return (
     <div className="pt-20">
       <section className="py-24 bg-gradient-to-b from-navy-950 to-navy-900">
-        <div className="max-w-5xl mx-auto px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">{t('hero.title')}</h1>
-          <p className="text-xl text-gray-300 leading-relaxed max-w-3xl mx-auto">{t('hero.subtitle')}</p>
+        <div className="max-w-6xl mx-auto px-6 lg:px-8 text-center space-y-6">
+          <p className="inline-flex px-4 py-1.5 rounded-full text-sm font-medium text-blue-200 bg-blue-500/10 border border-blue-500/20">
+            {nav('contact')}
+          </p>
+          <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold text-white">{t('hero.title')}</h1>
+          <p className="text-base sm:text-lg md:text-xl text-gray-300 leading-relaxed max-w-3xl mx-auto">{t('hero.subtitle')}</p>
         </div>
       </section>
 
-      <section className="py-20 bg-navy-900">
+      <section className="py-16 sm:py-20 bg-navy-900">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-[1.2fr,0.8fr] gap-12">
           <div className="bg-navy-950/60 border border-white/10 rounded-2xl p-8 shadow-xl shadow-black/20">
             <div className="flex items-center gap-3 mb-6">
-              <span className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse" />
+              <span className="w-2 h-2 bg-blue-400 rounded-full animate-pulse" />
               <p className="text-sm text-gray-400">{t('process.title')}</p>
             </div>
 

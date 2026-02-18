@@ -50,16 +50,16 @@ export default async function ServicesPage({ params }: PageProps) {
   return (
     <div className="pt-20">
       <section className="py-24 bg-gradient-to-b from-navy-950 to-navy-900">
-        <div className="max-w-6xl mx-auto px-6 lg:px-8 text-center">
-          <p className="inline-flex px-4 py-1.5 rounded-full text-sm font-medium text-blue-200 bg-blue-500/10 border border-blue-500/20 mb-6">
+        <div className="max-w-6xl mx-auto px-6 lg:px-8 text-center space-y-6">
+          <p className="inline-flex px-4 py-1.5 rounded-full text-sm font-medium text-blue-200 bg-blue-500/10 border border-blue-500/20">
             {t('badge')}
           </p>
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">{t('title')}</h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">{t('subtitle')}</p>
+          <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold text-white">{t('title')}</h1>
+          <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-3xl mx-auto">{t('subtitle')}</p>
         </div>
       </section>
 
-      <section className="py-20 bg-navy-900">
+      <section className="py-16 sm:py-20 bg-navy-900">
         <div className="max-w-6xl mx-auto px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-6">
           {cards.map((card) => (
             <Link

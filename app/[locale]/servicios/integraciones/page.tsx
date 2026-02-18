@@ -17,6 +17,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 export default async function IntegrationsPage({ params }: PageProps) {
   unstable_setRequestLocale(params.locale);
   const t = await getTranslations({ locale: params.locale, namespace: 'integrations' });
+  const nav = await getTranslations({ locale: params.locale, namespace: 'nav' });
   const locale = params.locale;
 
   const challengeKeys = ['item1', 'item2', 'item3', 'item4'] as const;
@@ -25,16 +26,19 @@ export default async function IntegrationsPage({ params }: PageProps) {
 
   return (
     <div className="pt-20">
-      <section className="py-24 bg-gradient-to-b from-navy-950 to-navy-900 text-center">
-        <div className="max-w-6xl mx-auto px-6 lg:px-8 space-y-4">
-          <p className="inline-flex px-4 py-1.5 rounded-full text-sm font-medium text-purple-200 bg-purple-500/10 border border-purple-500/20">
-            {t('hero.title')}
+      <section className="py-24 bg-gradient-to-b from-navy-950 to-navy-900">
+        <div className="max-w-6xl mx-auto px-6 lg:px-8 text-center space-y-6">
+          <p className="inline-flex px-4 py-1.5 rounded-full text-sm font-medium text-blue-200 bg-blue-500/10 border border-blue-500/20">
+            {nav('services')}
           </p>
-          <h1 className="text-4xl md:text-5xl font-bold text-white">{t('hero.subtitle')}</h1>
+          <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold text-white">{t('hero.title')}</h1>
+          <p className="text-base sm:text-lg md:text-xl text-gray-300 leading-relaxed max-w-3xl mx-auto">
+            {t('hero.subtitle')}
+          </p>
         </div>
       </section>
 
-      <section className="py-16 bg-navy-900">
+      <section className="py-14 sm:py-16 bg-navy-900">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-8">
             <h3 className="text-3xl font-bold text-white">{t('challenges.title')}</h3>
@@ -50,7 +54,7 @@ export default async function IntegrationsPage({ params }: PageProps) {
         </div>
       </section>
 
-      <section className="py-16 bg-navy-950">
+      <section className="py-14 sm:py-16 bg-navy-950">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
           <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-6">
             <h3 className="text-2xl font-semibold text-white mb-4">{t('platforms.title')}</h3>
@@ -66,7 +70,7 @@ export default async function IntegrationsPage({ params }: PageProps) {
         </div>
       </section>
 
-      <section className="py-16 bg-navy-900">
+      <section className="py-14 sm:py-16 bg-navy-900">
         <div className="max-w-6xl mx-auto px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-4">
           {architectureKeys.map((key, idx) => (
             <div key={key} className="rounded-2xl border border-white/10 bg-white/[0.03] p-5">
@@ -78,7 +82,7 @@ export default async function IntegrationsPage({ params }: PageProps) {
         </div>
       </section>
 
-      <section className="py-16 bg-navy-950">
+      <section className="py-14 sm:py-16 bg-navy-950">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-8">
             <h3 className="text-3xl font-bold text-white">{t('approach.title')}</h3>
@@ -96,13 +100,13 @@ export default async function IntegrationsPage({ params }: PageProps) {
         </div>
       </section>
 
-      <section className="py-20 bg-gradient-to-br from-purple-500/10 to-indigo-500/10">
+      <section className="py-16 sm:py-20 bg-gradient-to-br from-blue-600/10 to-indigo-600/10">
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center space-y-4">
           <h3 className="text-3xl font-bold text-white">{t('cta.title')}</h3>
           <p className="text-gray-200">{t('cta.subtitle')}</p>
           <a
             href={`/${locale}/contacto`}
-            className="btn-sheen inline-flex items-center justify-center px-8 py-4 rounded-xl bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-semibold shadow-lg shadow-purple-600/30 hover:translate-y-[-1px] transition-all"
+            className="btn-sheen inline-flex items-center justify-center px-8 py-4 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-500 text-white font-semibold shadow-lg shadow-blue-700/30 hover:translate-y-[-1px] transition-all"
           >
             {t('cta.button')}
           </a>

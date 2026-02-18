@@ -36,25 +36,25 @@ export default async function CaseStudiesPage({ params }: PageProps) {
   return (
     <div className="pt-20">
       <section className="py-24 bg-gradient-to-b from-navy-950 to-navy-900">
-        <div className="max-w-6xl mx-auto px-6 lg:px-8 text-center">
-          <p className="inline-flex px-4 py-1.5 rounded-full text-sm font-medium text-blue-200 bg-blue-500/10 border border-blue-500/20 mb-6">
+        <div className="max-w-6xl mx-auto px-6 lg:px-8 text-center space-y-6">
+          <p className="inline-flex px-4 py-1.5 rounded-full text-sm font-medium text-blue-200 bg-blue-500/10 border border-blue-500/20">
             {showContent ? t('hero.badge') : wip.badge}
           </p>
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+          <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold text-white">
             {showContent ? t('hero.title') : wip.title}
           </h1>
-          <p className="text-xl text-gray-300 leading-relaxed max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl text-gray-300 leading-relaxed max-w-3xl mx-auto">
             {showContent ? t('hero.subtitle') : wip.subtitle}
           </p>
         </div>
       </section>
 
-      <section className="py-20 bg-navy-900">
+      <section className="py-16 sm:py-20 bg-navy-900">
         <div className="max-w-6xl mx-auto px-6 lg:px-8 space-y-10">
           {cases.map((key, idx) => (
             <div
               key={key}
-              className={`rounded-2xl ${cardSurface} overflow-hidden transition-colors hover:border-white/15`}
+              className={`rounded-2xl ${cardSurface} overflow-hidden transition-colors hover:border-blue-400/40`}
             >
               <div className="grid grid-cols-1 md:grid-cols-[1.1fr,0.9fr]">
                 <div className="p-8 md:p-10 bg-gradient-to-br from-navy-950 via-navy-900 to-navy-950">

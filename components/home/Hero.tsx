@@ -39,18 +39,18 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-navy-950 via-navy-900 to-navy-950 pt-24">
+    <section className="relative overflow-hidden bg-gradient-to-br from-navy-950 via-navy-900 to-navy-950 pt-20 sm:pt-24 lg:pt-20 lg:min-h-[calc(100vh-80px)] lg:flex lg:items-center">
       <div className="absolute inset-0 opacity-[0.08] bg-[radial-gradient(circle_at_20%_20%,rgba(59,130,246,0.25),transparent_35%),radial-gradient(circle_at_80%_0%,rgba(167,139,250,0.22),transparent_30%)]" />
       <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10" />
 
-      <div className="relative max-w-7xl mx-auto px-6 lg:px-8 py-20">
-        <div className="grid grid-cols-1 lg:grid-cols-[1.1fr,0.9fr] gap-12 items-center">
-          <div className="space-y-8">
+      <div className="relative max-w-7xl mx-auto px-6 lg:px-8 py-12 sm:py-16 lg:py-10 w-full">
+        <div className="grid grid-cols-1 lg:grid-cols-[1.05fr,0.95fr] gap-10 lg:gap-12 items-center">
+          <div className="space-y-6 lg:space-y-7">
             <div
               className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm text-blue-200 animate-fade-in-up"
               style={{ animationDelay: '50ms' }}
             >
-              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+              <span className="w-2 h-2 rounded-full bg-blue-400 animate-pulse" />
               {t('badge')}
             </div>
 
@@ -62,14 +62,14 @@ export default function Hero() {
             </h1>
 
             <p
-              className="text-lg sm:text-xl text-gray-300 leading-relaxed max-w-2xl animate-fade-in-up"
+              className="text-base sm:text-lg md:text-xl text-gray-300 leading-relaxed max-w-2xl animate-fade-in-up"
               style={{ animationDelay: '220ms' }}
             >
               {t('subtitle')}
             </p>
 
             <div
-              className="grid grid-cols-2 gap-4 max-w-lg animate-fade-in-up"
+              className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 max-w-md sm:max-w-lg animate-fade-in-up"
               style={{ animationDelay: '280ms' }}
             >
               <div className="rounded-xl bg-white/5 border border-white/10 p-4">
@@ -92,18 +92,12 @@ export default function Hero() {
             >
               <Link
                 href={`/${locale}/contacto`}
-                className="group btn-sheen inline-flex items-center justify-center px-8 py-4 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-500 text-white font-semibold shadow-lg shadow-blue-700/30 hover:translate-y-[-1px] transition-all"
+                className="group btn-sheen inline-flex w-full sm:w-auto items-center justify-center px-8 py-4 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-500 text-white font-semibold shadow-lg shadow-blue-700/30 hover:translate-y-[-1px] transition-all"
               >
                 {t('cta')}
                 <svg className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
                 </svg>
-              </Link>
-              <Link
-                href={`/${locale}/casos-de-exito`}
-                className="inline-flex items-center justify-center px-8 py-4 rounded-xl border border-white/15 text-white font-semibold hover:bg-white/5 transition-colors"
-              >
-                {t('ctaSecondary')}
               </Link>
             </div>
 
@@ -112,17 +106,17 @@ export default function Hero() {
           <div className="relative">
             <div
               ref={logoParallaxRef}
-              className="absolute -top-28 -right-20 w-[32rem] h-[32rem] pointer-events-none"
+              className="absolute -top-16 -right-16 sm:-top-20 sm:-right-24 lg:-top-28 lg:-right-20 w-[20rem] h-[20rem] sm:w-[24rem] sm:h-[24rem] lg:w-[32rem] lg:h-[32rem] pointer-events-none"
             >
               <div className="animate-logo-hero">
-                <LogoMark className="w-full h-full opacity-20 animate-logo-reveal logo-hero-glow" />
+                <LogoMark className="w-full h-full opacity-[0.15] sm:opacity-20 animate-logo-reveal logo-hero-glow" />
               </div>
             </div>
-            <div className="absolute inset-0 blur-3xl bg-gradient-to-br from-blue-500/20 via-cyan-500/10 to-purple-500/20" />
-            <div className="relative rounded-3xl border border-white/10 bg-white/[0.03] p-8 shadow-2xl shadow-blue-900/30 backdrop-blur">
+            <div className="absolute inset-0 blur-3xl bg-gradient-to-br from-blue-500/20 via-cyan-500/10 to-indigo-500/20" />
+            <div className="relative rounded-3xl border border-white/10 bg-white/[0.03] p-6 sm:p-8 shadow-2xl shadow-blue-900/30 backdrop-blur">
               <div className="flex items-center justify-between mb-6">
                 <div className="text-white font-semibold">{t('snapshotTitle')}</div>
-                <span className="text-xs text-emerald-400 bg-emerald-500/10 px-3 py-1 rounded-full">
+                <span className="text-xs text-blue-300 bg-blue-500/10 px-3 py-1 rounded-full border border-blue-500/20">
                   {t('slaBadge')}
                 </span>
               </div>

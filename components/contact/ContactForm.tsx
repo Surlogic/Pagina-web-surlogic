@@ -140,7 +140,7 @@ export function ContactForm({ strings }: ContactFormProps) {
         <Link
           href={whatsappLink}
           target="_blank"
-          className="inline-flex items-center justify-center px-6 py-4 rounded-xl border border-emerald-400/50 text-emerald-200 hover:bg-emerald-500/10 transition-colors"
+          className="inline-flex items-center justify-center px-6 py-4 rounded-xl border border-blue-400/50 text-blue-200 hover:bg-blue-500/10 transition-colors"
         >
           {strings.whatsapp}
         </Link>

@@ -3,6 +3,7 @@
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import { useParams } from 'next/navigation';
+import LogoMark from '@/components/brand/LogoMark';
 
 export default function Footer() {
   const t = useTranslations('footer');
@@ -14,10 +15,15 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           <div className="md:col-span-2">
-            <div className="text-2xl font-bold text-white mb-4 flex items-center gap-2">
-              <span className="px-2 py-1 rounded-lg bg-white/5 border border-white/10 text-blue-400">Sur</span>
-              <span>Logic</span>
-            </div>
+            <Link
+              href={`/${locale}`}
+              className="inline-flex items-center gap-3 text-2xl font-bold text-white mb-4 group"
+            >
+              <span className="w-9 h-9 text-blue-200 group-hover:text-blue-100 transition-colors">
+                <LogoMark className="w-full h-full" />
+              </span>
+              <span className="tracking-tight text-white">SurLogic</span>
+            </Link>
             <p className="text-gray-400 max-w-md mb-6">{t('description')}</p>
 
             <div className="space-y-3 text-gray-300 text-sm">
@@ -60,18 +66,18 @@ export default function Footer() {
                 href="https://wa.me/59891488400"
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center justify-center w-10 h-10 rounded-lg border border-emerald-400/60 bg-emerald-500/25 text-emerald-50 hover:bg-emerald-500/40 transition-colors"
+                className="inline-flex items-center justify-center w-10 h-10 rounded-lg border border-blue-400/60 bg-blue-500/25 text-blue-50 hover:bg-blue-500/40 transition-colors"
                 aria-label={t('ariaWhatsapp')}
               >
-                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M16.7 13.4c-.3-.1-1.8-.9-2.1-1-.3-.1-.5-.1-.7.1-.2.2-.8 1-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.8-.7-1.4-1.6-1.6-1.9-.2-.3 0-.4.1-.5.2-.2.3-.3.4-.4.2-.2.2-.3.3-.5.1-.2.1-.3 0-.5-.1-.1-.7-1.7-.9-2.3-.2-.5-.5-.5-.7-.5h-.6c-.2 0-.5.1-.7.3-.2.2-.9.8-.9 2 0 1.2.9 2.3 1 2.5.1.2 1.8 2.8 4.3 3.9.6.3 1 .5 1.4.6.6.2 1.1.2 1.5.1.5-.1 1.8-.7 2.1-1.4.3-.7.3-1.3.2-1.4-.1-.2-.2-.2-.5-.3z" />
+                <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M20.52 3.48A11.74 11.74 0 0012.02 0C5.39 0 .01 5.38.01 12c0 2.11.55 4.17 1.6 6L0 24l6.23-1.63A11.9 11.9 0 0012.02 24C18.64 24 24 18.62 24 12c0-3.2-1.25-6.21-3.5-8.52zM12.02 21.8c-1.85 0-3.66-.5-5.24-1.45l-.38-.22-3.7.97.99-3.61-.25-.39a9.77 9.77 0 01-1.5-5.1c0-5.4 4.4-9.8 9.8-9.8 2.62 0 5.08 1.02 6.93 2.87A9.73 9.73 0 0121.8 12c0 5.4-4.38 9.8-9.78 9.8zm5.66-7.36c-.31-.16-1.84-.9-2.12-1-.29-.1-.5-.16-.71.16-.21.31-.82 1-.99 1.2-.18.2-.35.23-.66.08-.31-.16-1.3-.48-2.48-1.52-.92-.82-1.54-1.83-1.72-2.14-.18-.31-.02-.48.14-.64.14-.14.31-.35.47-.52.16-.18.21-.31.31-.52.1-.21.05-.39-.02-.55-.08-.16-.71-1.7-.97-2.33-.26-.62-.52-.54-.71-.55h-.61c-.2 0-.52.08-.8.39-.28.31-1.06 1.04-1.06 2.54 0 1.5 1.09 2.95 1.24 3.15.16.21 2.15 3.28 5.21 4.6.73.31 1.3.5 1.75.64.74.24 1.41.2 1.94.12.59-.09 1.84-.75 2.1-1.47.26-.72.26-1.34.18-1.47-.08-.13-.29-.21-.6-.36z" />
                 </svg>
               </a>
               <a
                 href="https://www.instagram.com/surlogic_/"
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center justify-center w-10 h-10 rounded-lg border border-fuchsia-400/60 bg-fuchsia-500/25 text-fuchsia-50 hover:bg-fuchsia-500/40 transition-colors"
+                className="inline-flex items-center justify-center w-10 h-10 rounded-lg border border-blue-400/60 bg-blue-500/25 text-blue-50 hover:bg-blue-500/40 transition-colors"
                 aria-label={t('ariaInstagram')}
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -82,7 +88,7 @@ export default function Footer() {
                 href="https://www.linkedin.com/company/surlogicuy/"
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center justify-center w-10 h-10 rounded-lg border border-sky-400/60 bg-sky-500/25 text-sky-50 hover:bg-sky-500/40 transition-colors"
+                className="inline-flex items-center justify-center w-10 h-10 rounded-lg border border-blue-400/60 bg-blue-500/25 text-blue-50 hover:bg-blue-500/40 transition-colors"
                 aria-label={t('ariaLinkedin')}
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
