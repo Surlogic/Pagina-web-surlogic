@@ -1,7 +1,7 @@
 export const CONTACT = {
   whatsapp: {
     e164: '59898532380',
-    display: '098 532 380',
+    display: '+598 98 532 380',
   },
 } as const;
 
