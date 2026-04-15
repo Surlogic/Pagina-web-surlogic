@@ -6,7 +6,6 @@ import Problems from '@/components/home/Problems';
 import Services from '@/components/home/Services';
 import Methodology from '@/components/home/Methodology';
 import Trust from '@/components/home/Trust';
-import Testimonials from '@/components/home/Testimonials';
 import CTA from '@/components/home/CTA';
 
 type PageProps = {
@@ -32,7 +31,6 @@ export default function HomePage({ params }: PageProps) {
       <Services />
       <Methodology />
       <Trust />
-      <Testimonials />
       <CTA />
     </>
   );
