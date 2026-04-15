@@ -13,6 +13,7 @@ export default function Trust() {
     { name: 'Node.js', category: 'Backend' },
     { name: 'Python', category: 'Backend' },
     { name: '.NET', category: 'Backend' },
+    { name: 'GeneXus', category: 'Low-code' },
     { name: 'PostgreSQL', category: 'Data' },
     { name: 'MongoDB', category: 'Data' },
     { name: 'Redis', category: 'Data' },
