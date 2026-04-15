@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next';
 import { locales } from '@/lib/metadata';
 
-const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://surlogic.com';
+const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.surlogicuy.com';
 
 const paths = [
   '',

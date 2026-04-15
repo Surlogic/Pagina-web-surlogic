@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 const siteName = 'SurLogic';
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://surlogic.com';
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.surlogicuy.com';
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),

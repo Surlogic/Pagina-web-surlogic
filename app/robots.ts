@@ -1,6 +1,6 @@
 import { MetadataRoute } from 'next';
 
-const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://surlogic.com';
+const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.surlogicuy.com';
 
 export default function robots(): MetadataRoute.Robots {
   return {

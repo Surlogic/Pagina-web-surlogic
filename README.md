@@ -173,5 +173,5 @@ Los componentes están en `/components/` organizados por función.
 
 ## Soporte
 
-Para soporte técnico, contactar a: contacto@surlogic.com
+Para soporte técnico, contactar a: admin@surlogicuy.com
 # Pagina-web-surlogic

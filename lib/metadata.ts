@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://surlogic.com';
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.surlogicuy.com';
 const locales = ['es', 'en', 'pt'] as const;
 
 type Locale = (typeof locales)[number];
