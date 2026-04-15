@@ -1,35 +1,24 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" fill="none" aria-hidden="true">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 251 252" fill="none" aria-hidden="true">
+  <rect width="251" height="252" fill="#D8C4A5" />
   <path
-    d="M52 184V60L102 140L152 60V184"
-    stroke="#676767"
+    d="M55 58V184M55 58L103 130L145 63V184"
+    stroke="#666666"
     stroke-width="8"
     stroke-linecap="round"
     stroke-linejoin="round"
   />
   <path
-    d="M188 74A58 58 0 1 0 188 130"
-    stroke="#676767"
+    d="M211 72A61 61 0 1 0 211 131"
+    stroke="#666666"
     stroke-width="8"
     stroke-linecap="round"
     stroke-linejoin="round"
   />
   <path
-    d="M152 184V72"
-    stroke="#676767"
-    stroke-width="8"
-    stroke-linecap="round"
-  />
-  <path
-    d="M118 184L152 72"
-    stroke="#676767"
+    d="M145 184V70M108 184L145 70M129 132H163"
+    stroke="#666666"
     stroke-width="8"
     stroke-linecap="round"
     stroke-linejoin="round"
-  />
-  <path
-    d="M132 130H164"
-    stroke="#676767"
-    stroke-width="8"
-    stroke-linecap="round"
   />
 </svg>
