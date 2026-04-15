@@ -12,9 +12,9 @@ export const metadata: Metadata = {
   },
   description: 'Partner tecnológico para empresas que requieren soluciones críticas de alto impacto.',
   icons: {
-    icon: '/brand/favicon-dark.png?v=1',
-    shortcut: '/brand/favicon-dark.png?v=1',
-    apple: '/brand/favicon-dark.png?v=1',
+    icon: '/brand/favicon-round.png?v=2',
+    shortcut: '/brand/favicon-round.png?v=2',
+    apple: '/brand/favicon-round.png?v=2',
   },
   openGraph: {
     siteName,

@@ -51,7 +51,7 @@ export default async function CaseStudiesPage({ params }: PageProps) {
                   <div className="mt-4 flex items-center gap-3">
                     <div className="h-12 w-12 md:h-14 md:w-14 rounded-full overflow-hidden border border-white/20 bg-[#d7c3a5] flex items-center justify-center shadow-inner">
                       <Image
-                        src="/brand/maria-carissima-logo.svg"
+                        src="/logos%20casos%20de%20exito/MC_logo.jpeg"
                         alt="Logo Maria Carissima"
                         width={56}
                         height={56}
