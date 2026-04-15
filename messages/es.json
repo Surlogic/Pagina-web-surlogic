@@ -494,19 +494,23 @@
   },
   "caseStudies": {
     "hero": {
-      "title": "Caso de éxito: Maria Carissima",
-      "subtitle": "Plataforma web a medida para centralizar pedidos, stock y operación de showroom con integración a Zeta Software.",
-      "badge": "Software a medida para operación comercial"
+      "title": "Casos de Éxito",
+      "subtitle": "Implementaciones reales de software a medida y su alcance operativo.",
+      "badge": "Resultados en proyectos reales"
+    },
+    "caseCard": {
+      "badge": "Caso publicado",
+      "cta": "Ver detalles"
     },
     "mariaCarissima": {
-      "client": "Maria Carissima",
+      "client": "Maria Carissima SAS",
       "industry": "Gestión comercial y stock",
       "appType": "Web app interna",
-      "summary": "Desarrollamos una solución que unifica la carga de pedidos, la consulta de inventario y la gestión de showroom en un flujo único, con backend propio y sincronización con Zeta Software.",
+      "summary": "Desarrollamos una solución que unifica la carga de pedidos, la consulta de inventario y la gestión de showroom en un flujo único para toda la operación.",
       "challenge": "El Desafío",
       "challengeText": "La operación necesitaba unificar pedidos, stock y showroom en una sola herramienta, evitando retrabajo manual, pérdida de trazabilidad y fricción al sincronizar con sistemas externos.",
       "solution": "La Solución",
-      "solutionText": "Construimos una aplicación web operativa con frontend responsive y backend API en Node.js para cubrir el flujo completo: carga de pedidos, control de stock, gestión de pendientes y sincronización con Zeta Software.",
+      "solutionText": "Implementamos una plataforma web de gestión que cubre el flujo completo: pedidos, control de stock, gestión de pendientes e integración segura con sistemas externos.",
       "scope": "Alcance del desarrollo",
       "scopeItem1": "Gestión de clientes, vendedores, comprobantes y depósitos.",
       "scopeItem2": "Alta de pedidos paso a paso con búsqueda por código, color o descripción.",
@@ -515,14 +519,8 @@
       "scopeItem5": "Historial de pedidos con filtros y exportación a Excel.",
       "scopeItem6": "Gestión de pendientes y cola operativa de showroom.",
       "scopeItem7": "Actualización masiva de stock desde archivos Excel (.xlsx).",
-      "scopeItem8": "Manejo de códigos rechazados por Zeta sin romper el flujo de trabajo.",
-      "stack": "Stack e integraciones",
-      "stackItem1": "Vue 3 + Vite + TypeScript",
-      "stackItem2": "Node.js + Express + TypeScript",
-      "stackItem3": "PostgreSQL",
-      "stackItem4": "Zeta Software REST API",
-      "stackItem5": "SMTP para recuperación de acceso",
-      "stackItem6": "Importación/exportación Excel",
+      "scopeItem8": "Gestión de incidencias de sincronización sin frenar la operación.",
+      "scopeItem9": "Acceso remoto seguro para equipos autorizados con conectividad a internet.",
       "impactTitle": "Resultado e impacto",
       "impactText": "La plataforma centraliza procesos que antes estaban fragmentados entre planillas y sistemas externos, mejora la trazabilidad operativa y reduce errores manuales. Métricas a completar con el cliente: [Tiempo de proceso reducido en X], [X% menos errores], [N pedidos gestionados por mes]."
     },

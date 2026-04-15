@@ -494,19 +494,23 @@
   },
   "caseStudies": {
     "hero": {
-      "title": "Case de Sucesso: Maria Carissima",
-      "subtitle": "Plataforma web sob medida para centralizar pedidos, estoque e operação de showroom com integração ao Zeta Software.",
-      "badge": "Software sob medida para operação comercial"
+      "title": "Cases de Sucesso",
+      "subtitle": "Implementações reais de software sob medida e seu escopo operacional.",
+      "badge": "Resultados em projetos reais"
+    },
+    "caseCard": {
+      "badge": "Case publicado",
+      "cta": "Ver detalhes"
     },
     "mariaCarissima": {
-      "client": "Maria Carissima",
+      "client": "Maria Carissima SAS",
       "industry": "Operação comercial e estoque",
       "appType": "Web app interna",
-      "summary": "Desenvolvemos uma solução que unifica criação de pedidos, consulta de estoque e gestão de showroom em um único fluxo, com backend próprio e sincronização com o Zeta Software.",
+      "summary": "Desenvolvemos uma solução que unifica criação de pedidos, consulta de estoque e gestão de showroom em um único fluxo para toda a operação.",
       "challenge": "O Desafio",
       "challengeText": "A operação precisava unificar pedidos, estoque e showroom em uma única ferramenta, reduzindo retrabalho manual, melhorando rastreabilidade e diminuindo atrito com sincronizações externas.",
       "solution": "A Solução",
-      "solutionText": "Entregamos uma aplicação web operacional com frontend responsivo e backend API em Node.js cobrindo todo o fluxo: criação de pedidos, controle de estoque, gestão de pendências e sincronização com o Zeta Software.",
+      "solutionText": "Entregamos uma plataforma web de gestão cobrindo todo o fluxo: pedidos, controle de estoque, gestão de pendências e integração segura com sistemas externos.",
       "scope": "Escopo da entrega",
       "scopeItem1": "Gestão de clientes, vendedores, comprovantes e depósitos.",
       "scopeItem2": "Fluxo de pedidos passo a passo com busca por código, cor ou descrição.",
@@ -515,14 +519,8 @@
       "scopeItem5": "Histórico de pedidos com filtros e exportação para Excel.",
       "scopeItem6": "Gestão da fila de pendências do showroom.",
       "scopeItem7": "Atualização em massa de estoque via arquivos Excel (.xlsx).",
-      "scopeItem8": "Tratamento de códigos rejeitados pelo Zeta sem quebrar o fluxo.",
-      "stack": "Stack e integrações",
-      "stackItem1": "Vue 3 + Vite + TypeScript",
-      "stackItem2": "Node.js + Express + TypeScript",
-      "stackItem3": "PostgreSQL",
-      "stackItem4": "Zeta Software REST API",
-      "stackItem5": "SMTP para recuperação de acesso",
-      "stackItem6": "Importação/exportação Excel",
+      "scopeItem8": "Tratamento de incidentes de sincronização sem parar a operação.",
+      "scopeItem9": "Acesso remoto seguro para equipes autorizadas com conectividade à internet.",
       "impactTitle": "Resultado e impacto",
       "impactText": "A plataforma centraliza processos que antes estavam distribuídos entre planilhas e sistemas externos, melhora a rastreabilidade operacional e reduz erros manuais. Métricas a completar com o cliente: [Tempo de processo reduzido em X], [X% menos erros], [N pedidos por mês]."
     },

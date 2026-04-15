@@ -494,19 +494,23 @@
   },
   "caseStudies": {
     "hero": {
-      "title": "Case Study: Maria Carissima",
-      "subtitle": "Custom web platform to centralize orders, inventory, and showroom operations with Zeta Software integration.",
-      "badge": "Custom software for commercial operations"
+      "title": "Case Studies",
+      "subtitle": "Real custom software implementations and their operational scope.",
+      "badge": "Results in real projects"
+    },
+    "caseCard": {
+      "badge": "Published case",
+      "cta": "View details"
     },
     "mariaCarissima": {
-      "client": "Maria Carissima",
+      "client": "Maria Carissima SAS",
       "industry": "Commercial operations and inventory",
       "appType": "Internal web app",
-      "summary": "We built a solution that unifies order creation, inventory checks, and showroom operations in one workflow, with a dedicated backend and Zeta Software synchronization.",
+      "summary": "We built a solution that unifies order creation, inventory checks, and showroom operations in a single workflow for the whole operation.",
       "challenge": "The Challenge",
       "challengeText": "The operation needed to unify orders, stock, and showroom tasks in one tool, reducing manual rework, improving traceability, and lowering friction with external syncs.",
       "solution": "The Solution",
-      "solutionText": "We delivered an operational web app with a responsive frontend and a Node.js API backend covering the full flow: order creation, stock control, pending management, and Zeta Software sync.",
+      "solutionText": "We delivered a web management platform covering the full flow: order processing, stock control, pending management, and secure integration with external systems.",
       "scope": "Delivery scope",
       "scopeItem1": "Customer, seller, document, and warehouse management.",
       "scopeItem2": "Step-by-step order flow with search by code, color, or description.",
@@ -515,14 +519,8 @@
       "scopeItem5": "Order history with filters and Excel export.",
       "scopeItem6": "Showroom pending queue management.",
       "scopeItem7": "Bulk stock updates from Excel (.xlsx) files.",
-      "scopeItem8": "Rejected-code handling from Zeta without breaking the workflow.",
-      "stack": "Stack and integrations",
-      "stackItem1": "Vue 3 + Vite + TypeScript",
-      "stackItem2": "Node.js + Express + TypeScript",
-      "stackItem3": "PostgreSQL",
-      "stackItem4": "Zeta Software REST API",
-      "stackItem5": "SMTP for account recovery",
-      "stackItem6": "Excel import/export",
+      "scopeItem8": "Synchronization-issue handling without stopping operations.",
+      "scopeItem9": "Secure remote access for authorized teams with internet connectivity.",
       "impactTitle": "Result and impact",
       "impactText": "The platform centralizes processes previously split across spreadsheets and external systems, improves operational traceability, and reduces manual errors. Metrics to complete with the client: [Process time reduced by X], [X% fewer errors], [N orders processed per month]."
     },
