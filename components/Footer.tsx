@@ -4,6 +4,7 @@ import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import { useParams } from 'next/navigation';
 import LogoMark from '@/components/brand/LogoMark';
+import { CONTACT } from '@/lib/contact';
 
 export default function Footer() {
   const t = useTranslations('footer');
@@ -46,8 +47,8 @@ export default function Footer() {
                 <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M16.7 13.4c-.3-.1-1.8-.9-2.1-1-.3-.1-.5-.1-.7.1-.2.2-.8 1-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.8-.7-1.4-1.6-1.6-1.9-.2-.3 0-.4.1-.5.2-.2.3-.3.4-.4.2-.2.2-.3.3-.5.1-.2.1-.3 0-.5-.1-.1-.7-1.7-.9-2.3-.2-.5-.5-.5-.7-.5h-.6c-.2 0-.5.1-.7.3-.2.2-.9.8-.9 2 0 1.2.9 2.3 1 2.5.1.2 1.8 2.8 4.3 3.9.6.3 1 .5 1.4.6.6.2 1.1.2 1.5.1.5-.1 1.8-.7 2.1-1.4.3-.7.3-1.3.2-1.4-.1-.2-.2-.2-.5-.3z" />
                 </svg>
-                <a href="https://wa.me/59891488400" target="_blank" rel="noreferrer" className="hover:text-white transition-colors">
-                  WhatsApp: +598 91 488 400
+                <a href={`https://wa.me/${CONTACT.whatsapp.e164}`} target="_blank" rel="noreferrer" className="hover:text-white transition-colors">
+                  WhatsApp: {CONTACT.whatsapp.display}
                 </a>
               </p>
             </div>
@@ -63,7 +64,7 @@ export default function Footer() {
                 </svg>
               </a>
               <a
-                href="https://wa.me/59891488400"
+                href={`https://wa.me/${CONTACT.whatsapp.e164}`}
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex items-center justify-center w-10 h-10 rounded-lg border border-blue-400/60 bg-blue-500/25 text-blue-50 hover:bg-blue-500/40 transition-colors"

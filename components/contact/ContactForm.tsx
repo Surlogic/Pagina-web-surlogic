@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import { buildWhatsAppLink } from '@/lib/contact';
 
 type FormStrings = {
   name: string;
@@ -61,7 +62,7 @@ export function ContactForm({ strings }: ContactFormProps) {
     }
   };
 
-  const whatsappLink = `https://wa.me/59891488400?text=${encodeURIComponent(strings.whatsappMessage)}`;
+  const whatsappLink = buildWhatsAppLink(strings.whatsappMessage);
 
   return (
     <form onSubmit={handleSubmit} className="space-y-6">

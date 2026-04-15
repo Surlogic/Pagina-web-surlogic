@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import type { Metadata } from 'next';
 import { createMetadata } from '@/lib/metadata';
 import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
@@ -47,9 +48,20 @@ export default async function CaseStudiesPage({ params }: PageProps) {
                   <span className="text-xs font-semibold text-blue-300 bg-blue-500/10 px-3 py-1 rounded-full border border-blue-500/20">
                     {t('caseCard.badge')}
                   </span>
-                  <h2 className="text-2xl md:text-3xl font-semibold text-white mt-4">
-                    {t('mariaCarissima.client')}
-                  </h2>
+                  <div className="mt-4 flex items-center gap-3">
+                    <div className="h-12 w-12 md:h-14 md:w-14 rounded-full overflow-hidden border border-white/20 bg-[#d7c3a5] flex items-center justify-center shadow-inner">
+                      <Image
+                        src="/brand/maria-carissima-logo.svg"
+                        alt="Logo Maria Carissima"
+                        width={56}
+                        height={56}
+                        className="h-full w-full object-cover"
+                      />
+                    </div>
+                    <h2 className="text-2xl md:text-3xl font-semibold text-white">
+                      {t('mariaCarissima.client')}
+                    </h2>
+                  </div>
                   <p className="text-gray-300 text-sm md:text-base leading-relaxed mt-2 max-w-3xl">
                     {t('mariaCarissima.summary')}
                   </p>
