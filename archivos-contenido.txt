@@ -1,0 +1,1138 @@
+==================================================
+ARCHIVO: components/home/Hero.tsx
+==================================================
+'use client';
+
+import { useTranslations } from 'next-intl';
+import Link from 'next/link';
+import { useParams } from 'next/navigation';
+
+export default function Hero() {
+  const t = useTranslations('hero');
+  const params = useParams();
+  const locale = params.locale as string;
+
+  return (
+    <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-b from-navy-950 via-navy-900 to-navy-950 pt-20">
+      <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center opacity-10" />
+      
+      <div className="relative max-w-7xl mx-auto px-6 lg:px-8 py-32 text-center">
+        <h1 className="text-5xl md:text-7xl font-bold text-white mb-8 leading-tight">
+          {t('title')}
+        </h1>
+        
+        <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
+          {t('subtitle')}
+        </p>
+
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+          <Link
+            href={`/${locale}/contacto`}
+            className="px-8 py-4 bg-blue-600 text-white text-lg font-semibold rounded-lg hover:bg-blue-700 transition-all duration-200 shadow-lg hover:shadow-blue-600/50"
+          >
+            {t('cta')}
+          </Link>
+          
+          <Link
+            href={`/${locale}/casos-de-exito`}
+            className="px-8 py-4 bg-transparent border-2 border-gray-600 text-white text-lg font-semibold rounded-lg hover:border-gray-400 transition-all duration-200"
+          >
+            {t('ctaSecondary')}
+          </Link>
+        </div>
+
+        <div className="mt-24 grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
+          <div className="p-6 bg-navy-900/50 rounded-lg border border-navy-800">
+            <div className="text-3xl font-bold text-blue-500 mb-2">10+</div>
+            <div className="text-gray-400 text-sm">Años de experiencia</div>
+          </div>
+          <div className="p-6 bg-navy-900/50 rounded-lg border border-navy-800">
+            <div className="text-3xl font-bold text-blue-500 mb-2">100+</div>
+            <div className="text-gray-400 text-sm">Proyectos entregados</div>
+          </div>
+          <div className="p-6 bg-navy-900/50 rounded-lg border border-navy-800">
+            <div className="text-3xl font-bold text-blue-500 mb-2">50+</div>
+            <div className="text-gray-400 text-sm">Clientes empresariales</div>
+          </div>
+          <div className="p-6 bg-navy-900/50 rounded-lg border border-navy-800">
+            <div className="text-3xl font-bold text-blue-500 mb-2">99%</div>
+            <div className="text-gray-400 text-sm">Satisfacción del cliente</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+
+==================================================
+ARCHIVO: components/home/Testimonials.tsx
+==================================================
+[ARCHIVO NO EXISTE - HAY QUE CREARLO]
+
+
+==================================================
+ARCHIVO: app/[locale]/page.tsx
+==================================================
+import { useTranslations } from 'next-intl';
+import Hero from '@/components/home/Hero';
+import Problems from '@/components/home/Problems';
+import Services from '@/components/home/Services';
+import Methodology from '@/components/home/Methodology';
+import CTA from '@/components/home/CTA';
+
+export default function HomePage() {
+  return (
+    <>
+      <Hero />
+      <Problems />
+      <Services />
+      <Methodology />
+      <CTA />
+    </>
+  );
+}
+
+
+==================================================
+ARCHIVO: app/[locale]/nosotros/page.tsx
+==================================================
+import { useTranslations } from 'next-intl';
+
+export default function AboutPage() {
+  const t = useTranslations('about');
+
+  return (
+    <div className="pt-20">
+      <section className="py-24 bg-gradient-to-b from-navy-950 to-navy-900">
+        <div className="max-w-5xl mx-auto px-6 lg:px-8 text-center">
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-8">
+            {t('hero.title')}
+          </h1>
+          <p className="text-xl text-gray-300 leading-relaxed">
+            {t('hero.subtitle')}
+          </p>
+        </div>
+      </section>
+
+      <section className="py-20 bg-navy-900">
+        <div className="max-w-5xl mx-auto px-6 lg:px-8">
+          <div className="bg-navy-950/50 rounded-2xl border border-navy-800 p-12">
+            <h2 className="text-3xl font-bold text-white mb-6">{t('vision.title')}</h2>
+            <p className="text-xl text-gray-300 leading-relaxed">{t('vision.text')}</p>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-navy-950">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <h2 className="text-4xl font-bold text-white mb-12 text-center">{t('values.title')}</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="p-8 bg-navy-900/50 rounded-xl border border-navy-800">
+              <h3 className="text-2xl font-semibold text-white mb-4">{t('values.excellence.title')}</h3>
+              <p className="text-gray-400 leading-relaxed">{t('values.excellence.description')}</p>
+            </div>
+            <div className="p-8 bg-navy-900/50 rounded-xl border border-navy-800">
+              <h3 className="text-2xl font-semibold text-white mb-4">{t('values.results.title')}</h3>
+              <p className="text-gray-400 leading-relaxed">{t('values.results.description')}</p>
+            </div>
+            <div className="p-8 bg-navy-900/50 rounded-xl border border-navy-800">
+              <h3 className="text-2xl font-semibold text-white mb-4">{t('values.transparency.title')}</h3>
+              <p className="text-gray-400 leading-relaxed">{t('values.transparency.description')}</p>
+            </div>
+            <div className="p-8 bg-navy-900/50 rounded-xl border border-navy-800">
+              <h3 className="text-2xl font-semibold text-white mb-4">{t('values.partnership.title')}</h3>
+              <p className="text-gray-400 leading-relaxed">{t('values.partnership.description')}</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-navy-900">
+        <div className="max-w-5xl mx-auto px-6 lg:px-8">
+          <h2 className="text-4xl font-bold text-white mb-12 text-center">{t('approach.title')}</h2>
+          <div className="bg-navy-950/50 rounded-2xl border border-navy-800 p-10">
+            <ul className="space-y-4">
+              <li className="flex items-start gap-4">
+                <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0" />
+                <p className="text-lg text-gray-300">{t('approach.item1')}</p>
+              </li>
+              <li className="flex items-start gap-4">
+                <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0" />
+                <p className="text-lg text-gray-300">{t('approach.item2')}</p>
+              </li>
+              <li className="flex items-start gap-4">
+                <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0" />
+                <p className="text-lg text-gray-300">{t('approach.item3')}</p>
+              </li>
+              <li className="flex items-start gap-4">
+                <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0" />
+                <p className="text-lg text-gray-300">{t('approach.item4')}</p>
+              </li>
+              <li className="flex items-start gap-4">
+                <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0" />
+                <p className="text-lg text-gray-300">{t('approach.item5')}</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-navy-950">
+        <div className="max-w-5xl mx-auto px-6 lg:px-8">
+          <div className="bg-navy-900/50 rounded-2xl border border-navy-800 p-12">
+            <h2 className="text-3xl font-bold text-white mb-6">{t('expertise.title')}</h2>
+            <p className="text-xl text-gray-300 leading-relaxed">{t('expertise.text')}</p>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}
+
+
+==================================================
+ARCHIVO: app/[locale]/contacto/page.tsx
+==================================================
+'use client';
+
+import { useTranslations } from 'next-intl';
+import { useState } from 'react';
+
+export default function ContactPage() {
+  const t = useTranslations('contact');
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    company: '',
+    phone: '',
+    service: '',
+    message: '',
+  });
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    console.log('Form submitted:', formData);
+  };
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  return (
+    <div className="pt-20">
+      <section className="py-24 bg-gradient-to-b from-navy-950 to-navy-900">
+        <div className="max-w-5xl mx-auto px-6 lg:px-8 text-center">
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-8">
+            {t('hero.title')}
+          </h1>
+          <p className="text-xl text-gray-300 leading-relaxed">
+            {t('hero.subtitle')}
+          </p>
+        </div>
+      </section>
+
+      <section className="py-20 bg-navy-900">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+            <div className="lg:col-span-2">
+              <div className="bg-navy-950/50 rounded-2xl border border-navy-800 p-10">
+                <form onSubmit={handleSubmit} className="space-y-6">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                      <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
+                        {t('form.name')}
+                      </label>
+                      <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        value={formData.name}
+                        onChange={handleChange}
+                        required
+                        className="w-full px-4 py-3 bg-navy-900 border border-navy-700 rounded-lg text-white focus:outline-none focus:border-blue-600 transition-colors"
+                      />
+                    </div>
+                    <div>
+                      <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
+                        {t('form.email')}
+                      </label>
+                      <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        value={formData.email}
+                        onChange={handleChange}
+                        required
+                        className="w-full px-4 py-3 bg-navy-900 border border-navy-700 rounded-lg text-white focus:outline-none focus:border-blue-600 transition-colors"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                      <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
+                        {t('form.company')}
+                      </label>
+                      <input
+                        type="text"
+                        id="company"
+                        name="company"
+                        value={formData.company}
+                        onChange={handleChange}
+                        required
+                        className="w-full px-4 py-3 bg-navy-900 border border-navy-700 rounded-lg text-white focus:outline-none focus:border-blue-600 transition-colors"
+                      />
+                    </div>
+                    <div>
+                      <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">
+                        {t('form.phone')}
+                      </label>
+                      <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        value={formData.phone}
+                        onChange={handleChange}
+                        className="w-full px-4 py-3 bg-navy-900 border border-navy-700 rounded-lg text-white focus:outline-none focus:border-blue-600 transition-colors"
+                      />
+                    </div>
+                  </div>
+
+                  <div>
+                    <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2">
+                      {t('form.service')}
+                    </label>
+                    <select
+                      id="service"
+                      name="service"
+                      value={formData.service}
+                      onChange={handleChange}
+                      required
+                      className="w-full px-4 py-3 bg-navy-900 border border-navy-700 rounded-lg text-white focus:outline-none focus:border-blue-600 transition-colors"
+                    >
+                      <option value="">{t('form.service')}</option>
+                      <option value="custom">{t('form.serviceCustom')}</option>
+                      <option value="automation">{t('form.serviceAutomation')}</option>
+                      <option value="integration">{t('form.serviceIntegration')}</option>
+                      <option value="app">{t('form.serviceApp')}</option>
+                      <option value="consulting">{t('form.serviceConsulting')}</option>
+                    </select>
+                  </div>
+
+                  <div>
+                    <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
+                      {t('form.message')}
+                    </label>
+                    <textarea
+                      id="message"
+                      name="message"
+                      value={formData.message}
+                      onChange={handleChange}
+                      required
+                      rows={6}
+                      className="w-full px-4 py-3 bg-navy-900 border border-navy-700 rounded-lg text-white focus:outline-none focus:border-blue-600 transition-colors resize-none"
+                    />
+                  </div>
+
+                  <button
+                    type="submit"
+                    className="w-full px-8 py-4 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors duration-200"
+                  >
+                    {t('form.submit')}
+                  </button>
+                </form>
+              </div>
+            </div>
+
+            <div className="space-y-8">
+              <div className="bg-navy-950/50 rounded-2xl border border-navy-800 p-8">
+                <h3 className="text-2xl font-bold text-white mb-6">{t('info.title')}</h3>
+                <div className="space-y-6">
+                  <div>
+                    <h4 className="text-sm font-semibold text-gray-400 mb-2">{t('info.email')}</h4>
+                    <p className="text-white">admin@surlogicuy.com</p>
+                  </div>
+                  <div>
+                    <h4 className="text-sm font-semibold text-gray-400 mb-2">{t('info.schedule')}</h4>
+                    <p className="text-white">{t('info.scheduleTime')}</p>
+                  </div>
+                  <div>
+                    <h4 className="text-sm font-semibold text-gray-400 mb-2">{t('info.response')}</h4>
+                    <p className="text-white">{t('info.responseTime')}</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-navy-950/50 rounded-2xl border border-navy-800 p-8">
+                <h3 className="text-2xl font-bold text-white mb-6">{t('process.title')}</h3>
+                <div className="space-y-6">
+                  <div>
+                    <div className="flex items-center gap-3 mb-2">
+                      <div className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-sm">
+                        1
+                      </div>
+                      <h4 className="font-semibold text-white">{t('process.step1.title')}</h4>
+                    </div>
+                    <p className="text-gray-400 text-sm ml-11">{t('process.step1.description')}</p>
+                  </div>
+                  <div>
+                    <div className="flex items-center gap-3 mb-2">
+                      <div className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-sm">
+                        2
+                      </div>
+                      <h4 className="font-semibold text-white">{t('process.step2.title')}</h4>
+                    </div>
+                    <p className="text-gray-400 text-sm ml-11">{t('process.step2.description')}</p>
+                  </div>
+                  <div>
+                    <div className="flex items-center gap-3 mb-2">
+                      <div className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-sm">
+                        3
+                      </div>
+                      <h4 className="font-semibold text-white">{t('process.step3.title')}</h4>
+                    </div>
+                    <p className="text-gray-400 text-sm ml-11">{t('process.step3.description')}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}
+
+
+==================================================
+ARCHIVO: components/Footer.tsx
+==================================================
+'use client';
+
+import { useTranslations } from 'next-intl';
+import Link from 'next/link';
+import { useParams } from 'next/navigation';
+
+export default function Footer() {
+  const t = useTranslations('footer');
+  const params = useParams();
+  const locale = params.locale as string;
+
+  return (
+    <footer className="bg-navy-950 border-t border-navy-800">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
+          <div className="md:col-span-2">
+            <div className="text-2xl font-bold text-white mb-4">
+              <span className="text-blue-500">Sur</span>Logic
+            </div>
+            <p className="text-gray-400 max-w-md mb-6">
+              {t('description')}
+            </p>
+          </div>
+
+          <div>
+            <h3 className="text-white font-semibold mb-4">{t('services')}</h3>
+            <ul className="space-y-3">
+              <li>
+                <Link href={`/${locale}/servicios/software-a-medida`} className="text-gray-400 hover:text-white transition-colors">
+                  Software a Medida
+                </Link>
+              </li>
+              <li>
+                <Link href={`/${locale}/servicios/automatizaciones`} className="text-gray-400 hover:text-white transition-colors">
+                  Automatización
+                </Link>
+              </li>
+              <li>
+                <Link href={`/${locale}/servicios/integraciones`} className="text-gray-400 hover:text-white transition-colors">
+                  Integraciones
+                </Link>
+              </li>
+              <li>
+                <Link href={`/${locale}/servicios/aplicaciones`} className="text-gray-400 hover:text-white transition-colors">
+                  Aplicaciones
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="text-white font-semibold mb-4">{t('company')}</h3>
+            <ul className="space-y-3">
+              <li>
+                <Link href={`/${locale}/nosotros`} className="text-gray-400 hover:text-white transition-colors">
+                  {t('company')}
+                </Link>
+              </li>
+              <li>
+                <Link href={`/${locale}/casos-de-exito`} className="text-gray-400 hover:text-white transition-colors">
+                  Casos de Éxito
+                </Link>
+              </li>
+              <li>
+                <Link href={`/${locale}/contacto`} className="text-gray-400 hover:text-white transition-colors">
+                  Contacto
+                </Link>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="border-t border-navy-800 mt-12 pt-8 text-center text-gray-500 text-sm">
+          <p>&copy; {new Date().getFullYear()} SurLogic. {t('rights')}.</p>
+        </div>
+      </div>
+    </footer>
+  );
+}
+
+
+==================================================
+ARCHIVO: app/globals.css
+==================================================
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-inter: 'Inter', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: #e5e7eb;
+  background: #000510;
+  font-family: var(--font-inter);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+
+==================================================
+ARCHIVO: app/[locale]/servicios/software-a-medida/page.tsx
+==================================================
+import { useTranslations } from 'next-intl';
+
+export default function CustomSoftwarePage() {
+  const t = useTranslations('customSoftware');
+
+  return (
+    <div className="pt-20">
+      <section className="py-24 bg-gradient-to-b from-navy-950 to-navy-900">
+        <div className="max-w-5xl mx-auto px-6 lg:px-8 text-center">
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-8">
+            {t('hero.title')}
+          </h1>
+          <p className="text-xl text-gray-300 leading-relaxed">
+            {t('hero.subtitle')}
+          </p>
+        </div>
+      </section>
+
+      <section className="py-20 bg-navy-900">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <h2 className="text-4xl font-bold text-white mb-12 text-center">
+            {t('benefits.title')}
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="p-8 bg-navy-950/50 rounded-xl border border-navy-800">
+              <h3 className="text-xl font-semibold text-white mb-3">{t('benefits.item1.title')}</h3>
+              <p className="text-gray-400">{t('benefits.item1.description')}</p>
+            </div>
+            <div className="p-8 bg-navy-950/50 rounded-xl border border-navy-800">
+              <h3 className="text-xl font-semibold text-white mb-3">{t('benefits.item2.title')}</h3>
+              <p className="text-gray-400">{t('benefits.item2.description')}</p>
+            </div>
+            <div className="p-8 bg-navy-950/50 rounded-xl border border-navy-800">
+              <h3 className="text-xl font-semibold text-white mb-3">{t('benefits.item3.title')}</h3>
+              <p className="text-gray-400">{t('benefits.item3.description')}</p>
+            </div>
+            <div className="p-8 bg-navy-950/50 rounded-xl border border-navy-800">
+              <h3 className="text-xl font-semibold text-white mb-3">{t('benefits.item4.title')}</h3>
+              <p className="text-gray-400">{t('benefits.item4.description')}</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-navy-950">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-white mb-4">{t('approach.title')}</h2>
+            <p className="text-xl text-gray-400">{t('approach.subtitle')}</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+            <div className="p-6 bg-navy-900/50 rounded-xl border border-navy-800">
+              <div className="text-5xl font-bold text-blue-600/20 mb-4">01</div>
+              <h3 className="text-lg font-semibold text-white mb-3">{t('approach.discovery.title')}</h3>
+              <p className="text-gray-400 text-sm">{t('approach.discovery.description')}</p>
+            </div>
+            <div className="p-6 bg-navy-900/50 rounded-xl border border-navy-800">
+              <div className="text-5xl font-bold text-blue-600/20 mb-4">02</div>
+              <h3 className="text-lg font-semibold text-white mb-3">{t('approach.architecture.title')}</h3>
+              <p className="text-gray-400 text-sm">{t('approach.architecture.description')}</p>
+            </div>
+            <div className="p-6 bg-navy-900/50 rounded-xl border border-navy-800">
+              <div className="text-5xl font-bold text-blue-600/20 mb-4">03</div>
+              <h3 className="text-lg font-semibold text-white mb-3">{t('approach.development.title')}</h3>
+              <p className="text-gray-400 text-sm">{t('approach.development.description')}</p>
+            </div>
+            <div className="p-6 bg-navy-900/50 rounded-xl border border-navy-800">
+              <div className="text-5xl font-bold text-blue-600/20 mb-4">04</div>
+              <h3 className="text-lg font-semibold text-white mb-3">{t('approach.delivery.title')}</h3>
+              <p className="text-gray-400 text-sm">{t('approach.delivery.description')}</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-navy-900">
+        <div className="max-w-5xl mx-auto px-6 lg:px-8">
+          <h2 className="text-4xl font-bold text-white mb-12 text-center">{t('useCases.title')}</h2>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+            <div className="p-6 bg-navy-950/50 rounded-lg border border-navy-800 text-center">
+              <p className="text-gray-300">{t('useCases.erp')}</p>
+            </div>
+            <div className="p-6 bg-navy-950/50 rounded-lg border border-navy-800 text-center">
+              <p className="text-gray-300">{t('useCases.crm')}</p>
+            </div>
+            <div className="p-6 bg-navy-950/50 rounded-lg border border-navy-800 text-center">
+              <p className="text-gray-300">{t('useCases.inventory')}</p>
+            </div>
+            <div className="p-6 bg-navy-950/50 rounded-lg border border-navy-800 text-center">
+              <p className="text-gray-300">{t('useCases.workflow')}</p>
+            </div>
+            <div className="p-6 bg-navy-950/50 rounded-lg border border-navy-800 text-center">
+              <p className="text-gray-300">{t('useCases.analytics')}</p>
+            </div>
+            <div className="p-6 bg-navy-950/50 rounded-lg border border-navy-800 text-center">
+              <p className="text-gray-300">{t('useCases.compliance')}</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}
+
+
+==================================================
+ARCHIVO: app/[locale]/servicios/automatizaciones/page.tsx
+==================================================
+import { useTranslations } from 'next-intl';
+
+export default function AutomationPage() {
+  const t = useTranslations('automation');
+
+  return (
+    <div className="pt-20">
+      <section className="py-24 bg-gradient-to-b from-navy-950 to-navy-900">
+        <div className="max-w-5xl mx-auto px-6 lg:px-8 text-center">
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-8">
+            {t('hero.title')}
+          </h1>
+          <p className="text-xl text-gray-300 leading-relaxed">
+            {t('hero.subtitle')}
+          </p>
+        </div>
+      </section>
+
+      <section className="py-20 bg-navy-900">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <h2 className="text-4xl font-bold text-white mb-12 text-center">
+            {t('impact.title')}
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="p-8 bg-gradient-to-br from-blue-900/50 to-navy-950/50 rounded-xl border border-blue-800/50 text-center">
+              <div className="text-4xl font-bold text-blue-400 mb-2">{t('impact.metric1.value')}</div>
+              <p className="text-gray-300">{t('impact.metric1.label')}</p>
+            </div>
+            <div className="p-8 bg-gradient-to-br from-blue-900/50 to-navy-950/50 rounded-xl border border-blue-800/50 text-center">
+              <div className="text-4xl font-bold text-blue-400 mb-2">{t('impact.metric2.value')}</div>
+              <p className="text-gray-300">{t('impact.metric2.label')}</p>
+            </div>
+            <div className="p-8 bg-gradient-to-br from-blue-900/50 to-navy-950/50 rounded-xl border border-blue-800/50 text-center">
+              <div className="text-4xl font-bold text-blue-400 mb-2">{t('impact.metric3.value')}</div>
+              <p className="text-gray-300">{t('impact.metric3.label')}</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-navy-950">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <h2 className="text-4xl font-bold text-white mb-12 text-center">{t('automations.title')}</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="p-6 bg-navy-900/50 rounded-xl border border-navy-800">
+              <h3 className="text-lg font-semibold text-white mb-3">{t('automations.invoicing.title')}</h3>
+              <p className="text-gray-400 text-sm">{t('automations.invoicing.description')}</p>
+            </div>
+            <div className="p-6 bg-navy-900/50 rounded-xl border border-navy-800">
+              <h3 className="text-lg font-semibold text-white mb-3">{t('automations.reporting.title')}</h3>
+              <p className="text-gray-400 text-sm">{t('automations.reporting.description')}</p>
+            </div>
+            <div className="p-6 bg-navy-900/50 rounded-xl border border-navy-800">
+              <h3 className="text-lg font-semibold text-white mb-3">{t('automations.inventory.title')}</h3>
+              <p className="text-gray-400 text-sm">{t('automations.inventory.description')}</p>
+            </div>
+            <div className="p-6 bg-navy-900/50 rounded-xl border border-navy-800">
+              <h3 className="text-lg font-semibold text-white mb-3">{t('automations.notifications.title')}</h3>
+              <p className="text-gray-400 text-sm">{t('automations.notifications.description')}</p>
+            </div>
+            <div className="p-6 bg-navy-900/50 rounded-xl border border-navy-800">
+              <h3 className="text-lg font-semibold text-white mb-3">{t('automations.dataEntry.title')}</h3>
+              <p className="text-gray-400 text-sm">{t('automations.dataEntry.description')}</p>
+            </div>
+            <div className="p-6 bg-navy-900/50 rounded-xl border border-navy-800">
+              <h3 className="text-lg font-semibold text-white mb-3">{t('automations.compliance.title')}</h3>
+              <p className="text-gray-400 text-sm">{t('automations.compliance.description')}</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-navy-900">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <h2 className="text-4xl font-bold text-white mb-12 text-center">{t('process.title')}</h2>
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+            <div className="p-6 bg-navy-950/50 rounded-xl border border-navy-800">
+              <div className="text-5xl font-bold text-blue-600/20 mb-4">01</div>
+              <h3 className="text-lg font-semibold text-white mb-3">{t('process.audit.title')}</h3>
+              <p className="text-gray-400 text-sm">{t('process.audit.description')}</p>
+            </div>
+            <div className="p-6 bg-navy-950/50 rounded-xl border border-navy-800">
+              <div className="text-5xl font-bold text-blue-600/20 mb-4">02</div>
+              <h3 className="text-lg font-semibold text-white mb-3">{t('process.design.title')}</h3>
+              <p className="text-gray-400 text-sm">{t('process.design.description')}</p>
+            </div>
+            <div className="p-6 bg-navy-950/50 rounded-xl border border-navy-800">
+              <div className="text-5xl font-bold text-blue-600/20 mb-4">03</div>
+              <h3 className="text-lg font-semibold text-white mb-3">{t('process.build.title')}</h3>
+              <p className="text-gray-400 text-sm">{t('process.build.description')}</p>
+            </div>
+            <div className="p-6 bg-navy-950/50 rounded-xl border border-navy-800">
+              <div className="text-5xl font-bold text-blue-600/20 mb-4">04</div>
+              <h3 className="text-lg font-semibold text-white mb-3">{t('process.monitoring.title')}</h3>
+              <p className="text-gray-400 text-sm">{t('process.monitoring.description')}</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}
+
+
+==================================================
+ARCHIVO: app/[locale]/servicios/integraciones/page.tsx
+==================================================
+import { useTranslations } from 'next-intl';
+
+export default function IntegrationsPage() {
+  const t = useTranslations('integrations');
+
+  return (
+    <div className="pt-20">
+      <section className="py-24 bg-gradient-to-b from-navy-950 to-navy-900">
+        <div className="max-w-5xl mx-auto px-6 lg:px-8 text-center">
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-8">
+            {t('hero.title')}
+          </h1>
+          <p className="text-xl text-gray-300 leading-relaxed">
+            {t('hero.subtitle')}
+          </p>
+        </div>
+      </section>
+
+      <section className="py-20 bg-navy-900">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <h2 className="text-4xl font-bold text-white mb-12 text-center">
+            {t('challenges.title')}
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="p-8 bg-navy-950/50 rounded-xl border border-navy-800">
+              <h3 className="text-xl font-semibold text-white mb-3">{t('challenges.item1.title')}</h3>
+              <p className="text-gray-400">{t('challenges.item1.description')}</p>
+            </div>
+            <div className="p-8 bg-navy-950/50 rounded-xl border border-navy-800">
+              <h3 className="text-xl font-semibold text-white mb-3">{t('challenges.item2.title')}</h3>
+              <p className="text-gray-400">{t('challenges.item2.description')}</p>
+            </div>
+            <div className="p-8 bg-navy-950/50 rounded-xl border border-navy-800">
+              <h3 className="text-xl font-semibold text-white mb-3">{t('challenges.item3.title')}</h3>
+              <p className="text-gray-400">{t('challenges.item3.description')}</p>
+            </div>
+            <div className="p-8 bg-navy-950/50 rounded-xl border border-navy-800">
+              <h3 className="text-xl font-semibold text-white mb-3">{t('challenges.item4.title')}</h3>
+              <p className="text-gray-400">{t('challenges.item4.description')}</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-navy-950">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-white mb-4">{t('platforms.title')}</h2>
+            <p className="text-xl text-gray-400">{t('platforms.subtitle')}</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="p-6 bg-navy-900/50 rounded-xl border border-navy-800">
+              <h3 className="text-lg font-semibold text-blue-400 mb-3">ERP</h3>
+              <p className="text-gray-300">{t('platforms.erp')}</p>
+            </div>
+            <div className="p-6 bg-navy-900/50 rounded-xl border border-navy-800">
+              <h3 className="text-lg font-semibold text-blue-400 mb-3">CRM</h3>
+              <p className="text-gray-300">{t('platforms.crm')}</p>
+            </div>
+            <div className="p-6 bg-navy-900/50 rounded-xl border border-navy-800">
+              <h3 className="text-lg font-semibold text-blue-400 mb-3">E-commerce</h3>
+              <p className="text-gray-300">{t('platforms.ecommerce')}</p>
+            </div>
+            <div className="p-6 bg-navy-900/50 rounded-xl border border-navy-800">
+              <h3 className="text-lg font-semibold text-blue-400 mb-3">Payment</h3>
+              <p className="text-gray-300">{t('platforms.payment')}</p>
+            </div>
+            <div className="p-6 bg-navy-900/50 rounded-xl border border-navy-800">
+              <h3 className="text-lg font-semibold text-blue-400 mb-3">Logistics</h3>
+              <p className="text-gray-300">{t('platforms.logistics')}</p>
+            </div>
+            <div className="p-6 bg-navy-900/50 rounded-xl border border-navy-800">
+              <h3 className="text-lg font-semibold text-blue-400 mb-3">Accounting</h3>
+              <p className="text-gray-300">{t('platforms.accounting')}</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-navy-900">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <h2 className="text-4xl font-bold text-white mb-12 text-center">{t('architecture.title')}</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="p-6 bg-navy-950/50 rounded-xl border border-navy-800">
+              <h3 className="text-lg font-semibold text-white mb-3">{t('architecture.rest.title')}</h3>
+              <p className="text-gray-400 text-sm">{t('architecture.rest.description')}</p>
+            </div>
+            <div className="p-6 bg-navy-950/50 rounded-xl border border-navy-800">
+              <h3 className="text-lg font-semibold text-white mb-3">{t('architecture.webhooks.title')}</h3>
+              <p className="text-gray-400 text-sm">{t('architecture.webhooks.description')}</p>
+            </div>
+            <div className="p-6 bg-navy-950/50 rounded-xl border border-navy-800">
+              <h3 className="text-lg font-semibold text-white mb-3">{t('architecture.queues.title')}</h3>
+              <p className="text-gray-400 text-sm">{t('architecture.queues.description')}</p>
+            </div>
+            <div className="p-6 bg-navy-950/50 rounded-xl border border-navy-800">
+              <h3 className="text-lg font-semibold text-white mb-3">{t('architecture.etl.title')}</h3>
+              <p className="text-gray-400 text-sm">{t('architecture.etl.description')}</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}
+
+
+==================================================
+ARCHIVO: app/[locale]/servicios/aplicaciones/page.tsx
+==================================================
+import { useTranslations } from 'next-intl';
+
+export default function ApplicationsPage() {
+  const t = useTranslations('applications');
+
+  return (
+    <div className="pt-20">
+      <section className="py-24 bg-gradient-to-b from-navy-950 to-navy-900">
+        <div className="max-w-5xl mx-auto px-6 lg:px-8 text-center">
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-8">
+            {t('hero.title')}
+          </h1>
+          <p className="text-xl text-gray-300 leading-relaxed">
+            {t('hero.subtitle')}
+          </p>
+        </div>
+      </section>
+
+      <section className="py-20 bg-navy-900">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <h2 className="text-4xl font-bold text-white mb-12 text-center">
+            {t('focus.title')}
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="p-8 bg-navy-950/50 rounded-xl border border-navy-800">
+              <h3 className="text-xl font-semibold text-white mb-3">{t('focus.ux.title')}</h3>
+              <p className="text-gray-400">{t('focus.ux.description')}</p>
+            </div>
+            <div className="p-8 bg-navy-950/50 rounded-xl border border-navy-800">
+              <h3 className="text-xl font-semibold text-white mb-3">{t('focus.performance.title')}</h3>
+              <p className="text-gray-400">{t('focus.performance.description')}</p>
+            </div>
+            <div className="p-8 bg-navy-950/50 rounded-xl border border-navy-800">
+              <h3 className="text-xl font-semibold text-white mb-3">{t('focus.security.title')}</h3>
+              <p className="text-gray-400">{t('focus.security.description')}</p>
+            </div>
+            <div className="p-8 bg-navy-950/50 rounded-xl border border-navy-800">
+              <h3 className="text-xl font-semibold text-white mb-3">{t('focus.reliability.title')}</h3>
+              <p className="text-gray-400">{t('focus.reliability.description')}</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-navy-950">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <h2 className="text-4xl font-bold text-white mb-12 text-center">{t('types.title')}</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="p-8 bg-navy-900/50 rounded-xl border border-navy-800">
+              <h3 className="text-2xl font-semibold text-white mb-4">{t('types.web.title')}</h3>
+              <p className="text-gray-400">{t('types.web.description')}</p>
+            </div>
+            <div className="p-8 bg-navy-900/50 rounded-xl border border-navy-800">
+              <h3 className="text-2xl font-semibold text-white mb-4">{t('types.mobile.title')}</h3>
+              <p className="text-gray-400">{t('types.mobile.description')}</p>
+            </div>
+            <div className="p-8 bg-navy-900/50 rounded-xl border border-navy-800">
+              <h3 className="text-2xl font-semibold text-white mb-4">{t('types.progressive.title')}</h3>
+              <p className="text-gray-400">{t('types.progressive.description')}</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-navy-900">
+        <div className="max-w-5xl mx-auto px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-white mb-4">{t('stack.title')}</h2>
+            <p className="text-xl text-gray-400">{t('stack.description')}</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="p-6 bg-navy-950/50 rounded-xl border border-navy-800">
+              <h3 className="text-lg font-semibold text-blue-400 mb-3">Frontend</h3>
+              <p className="text-gray-300">{t('stack.frontend')}</p>
+            </div>
+            <div className="p-6 bg-navy-950/50 rounded-xl border border-navy-800">
+              <h3 className="text-lg font-semibold text-blue-400 mb-3">Backend</h3>
+              <p className="text-gray-300">{t('stack.backend')}</p>
+            </div>
+            <div className="p-6 bg-navy-950/50 rounded-xl border border-navy-800">
+              <h3 className="text-lg font-semibold text-blue-400 mb-3">Mobile</h3>
+              <p className="text-gray-300">{t('stack.mobile')}</p>
+            </div>
+            <div className="p-6 bg-navy-950/50 rounded-xl border border-navy-800">
+              <h3 className="text-lg font-semibold text-blue-400 mb-3">Cloud</h3>
+              <p className="text-gray-300">{t('stack.cloud')}</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}
+
+
+==================================================
+ARCHIVO: app/[locale]/casos-de-exito/page.tsx
+==================================================
+import { useTranslations } from 'next-intl';
+
+export default function CaseStudiesPage() {
+  const t = useTranslations('caseStudies');
+
+  return (
+    <div className="pt-20">
+      <section className="py-24 bg-gradient-to-b from-navy-950 to-navy-900">
+        <div className="max-w-5xl mx-auto px-6 lg:px-8 text-center">
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-8">
+            {t('hero.title')}
+          </h1>
+          <p className="text-xl text-gray-300 leading-relaxed">
+            {t('hero.subtitle')}
+          </p>
+        </div>
+      </section>
+
+      <section className="py-20 bg-navy-900">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 space-y-16">
+          <div className="bg-navy-950/50 rounded-2xl border border-navy-800 overflow-hidden">
+            <div className="p-10">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="px-4 py-2 bg-blue-900/50 rounded-lg text-blue-400 text-sm font-semibold">
+                  {t('case1.industry')}
+                </div>
+              </div>
+              <h2 className="text-3xl font-bold text-white mb-8">{t('case1.client')}</h2>
+              
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                  <h3 className="text-lg font-semibold text-blue-400 mb-3">{t('case1.challenge')}</h3>
+                  <p className="text-gray-300 leading-relaxed">{t('case1.challengeText')}</p>
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold text-blue-400 mb-3">{t('case1.solution')}</h3>
+                  <p className="text-gray-300 leading-relaxed">{t('case1.solutionText')}</p>
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold text-blue-400 mb-3">{t('case1.results')}</h3>
+                  <ul className="space-y-2">
+                    <li className="flex items-start gap-2 text-gray-300">
+                      <svg className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                      </svg>
+                      <span>{t('case1.result1')}</span>
+                    </li>
+                    <li className="flex items-start gap-2 text-gray-300">
+                      <svg className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                      </svg>
+                      <span>{t('case1.result2')}</span>
+                    </li>
+                    <li className="flex items-start gap-2 text-gray-300">
+                      <svg className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                      </svg>
+                      <span>{t('case1.result3')}</span>
+                    </li>
+                    <li className="flex items-start gap-2 text-gray-300">
+                      <svg className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                      </svg>
+                      <span>{t('case1.result4')}</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-navy-950/50 rounded-2xl border border-navy-800 overflow-hidden">
+            <div className="p-10">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="px-4 py-2 bg-blue-900/50 rounded-lg text-blue-400 text-sm font-semibold">
+                  {t('case2.industry')}
+                </div>
+              </div>
+              <h2 className="text-3xl font-bold text-white mb-8">{t('case2.client')}</h2>
+              
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                  <h3 className="text-lg font-semibold text-blue-400 mb-3">{t('case2.challenge')}</h3>
+                  <p className="text-gray-300 leading-relaxed">{t('case2.challengeText')}</p>
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold text-blue-400 mb-3">{t('case2.solution')}</h3>
+                  <p className="text-gray-300 leading-relaxed">{t('case2.solutionText')}</p>
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold text-blue-400 mb-3">{t('case2.results')}</h3>
+                  <ul className="space-y-2">
+                    <li className="flex items-start gap-2 text-gray-300">
+                      <svg className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                      </svg>
+                      <span>{t('case2.result1')}</span>
+                    </li>
+                    <li className="flex items-start gap-2 text-gray-300">
+                      <svg className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                      </svg>
+                      <span>{t('case2.result2')}</span>
+                    </li>
+                    <li className="flex items-start gap-2 text-gray-300">
+                      <svg className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                      </svg>
+                      <span>{t('case2.result3')}</span>
+                    </li>
+                    <li className="flex items-start gap-2 text-gray-300">
+                      <svg className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                      </svg>
+                      <span>{t('case2.result4')}</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-navy-950/50 rounded-2xl border border-navy-800 overflow-hidden">
+            <div className="p-10">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="px-4 py-2 bg-blue-900/50 rounded-lg text-blue-400 text-sm font-semibold">
+                  {t('case3.industry')}
+                </div>
+              </div>
+              <h2 className="text-3xl font-bold text-white mb-8">{t('case3.client')}</h2>
+              
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                  <h3 className="text-lg font-semibold text-blue-400 mb-3">{t('case3.challenge')}</h3>
+                  <p className="text-gray-300 leading-relaxed">{t('case3.challengeText')}</p>
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold text-blue-400 mb-3">{t('case3.solution')}</h3>
+                  <p className="text-gray-300 leading-relaxed">{t('case3.solutionText')}</p>
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold text-blue-400 mb-3">{t('case3.results')}</h3>
+                  <ul className="space-y-2">
+                    <li className="flex items-start gap-2 text-gray-300">
+                      <svg className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                      </svg>
+                      <span>{t('case3.result1')}</span>
+                    </li>
+                    <li className="flex items-start gap-2 text-gray-300">
+                      <svg className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                      </svg>
+                      <span>{t('case3.result2')}</span>
+                    </li>
+                    <li className="flex items-start gap-2 text-gray-300">
+                      <svg className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                      </svg>
+                      <span>{t('case3.result3')}</span>
+                    </li>
+                    <li className="flex items-start gap-2 text-gray-300">
+                      <svg className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                      </svg>
+                      <span>{t('case3.result4')}</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}
