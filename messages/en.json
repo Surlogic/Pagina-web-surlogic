@@ -522,7 +522,7 @@
       "scopeItem8": "Synchronization-issue handling without stopping operations.",
       "scopeItem9": "Secure remote access for authorized teams with internet connectivity.",
       "impactTitle": "Result and impact",
-      "impactText": "The platform centralizes processes previously split across spreadsheets and external systems, improves operational traceability, and reduces manual errors. Metrics to complete with the client: [Process time reduced by X], [X% fewer errors], [N orders processed per month]."
+      "impactText": "The platform centralizes processes previously split across spreadsheets and external systems, improves operational traceability, and reduces manual errors. Metrics to complete with the client: [Reduce the order-management cycle from up to one week to an automated flow once the sale is completed], [Operational hours saved per week], [Reduced need to add extra staff for order preparation and related tasks]."
     },
     "otherCta": {
       "title": "Do you want to build something similar?",

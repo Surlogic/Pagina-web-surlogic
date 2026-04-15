@@ -522,7 +522,7 @@
       "scopeItem8": "Gestión de incidencias de sincronización sin frenar la operación.",
       "scopeItem9": "Acceso remoto seguro para equipos autorizados con conectividad a internet.",
       "impactTitle": "Resultado e impacto",
-      "impactText": "La plataforma centraliza procesos que antes estaban fragmentados entre planillas y sistemas externos, mejora la trazabilidad operativa y reduce errores manuales. Métricas a completar con el cliente: [Tiempo de proceso reducido en X], [X% menos errores], [N pedidos gestionados por mes]."
+      "impactText": "La plataforma centraliza procesos que antes estaban fragmentados entre planillas y sistemas externos, mejora la trazabilidad operativa y reduce errores manuales. Métricas a completar con el cliente: [Reducir el ciclo de gestión de pedidos de hasta una semana a una operación automatizada al concretar la venta], [Horas operativas ahorradas por semana], [Disminución de la necesidad de incorporar personal adicional para armado de pedidos y tareas asociadas]."
     },
     "otherCta": {
       "title": "¿Quiere implementar algo similar?",
