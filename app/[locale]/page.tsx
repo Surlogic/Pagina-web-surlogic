@@ -4,6 +4,7 @@ import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
 import Hero from '@/components/home/Hero';
 import Problems from '@/components/home/Problems';
 import Services from '@/components/home/Services';
+import StrategicAlliance from '@/components/home/StrategicAlliance';
 import Methodology from '@/components/home/Methodology';
 import Trust from '@/components/home/Trust';
 import CTA from '@/components/home/CTA';
@@ -29,6 +30,7 @@ export default function HomePage({ params }: PageProps) {
       <Hero />
       <Problems />
       <Services />
+      <StrategicAlliance />
       <Methodology />
       <Trust />
       <CTA />

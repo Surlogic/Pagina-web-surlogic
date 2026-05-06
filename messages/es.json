@@ -120,6 +120,23 @@
       "link": "Explorar Servicio"
     }
   },
+  "strategicAlliance": {
+    "badge": "Uruguay + Brasil",
+    "title": "Alianza estratégica con Hammer Consult",
+    "subtitle": "Sumamos respaldo, experiencia y capacidades para abordar proyectos de mayor alcance en Uruguay y la región.",
+    "paragraph1": "En SurLogic iniciamos una alianza estratégica con Hammer Consult, empresa brasileña con experiencia consolidada en tecnología para la gestión pública.",
+    "paragraph2": "Esta alianza nos permite sumar respaldo, experiencia y capacidades para abordar proyectos de mayor alcance en Uruguay, Brasil y la región.",
+    "statementTitle": "SurLogic x Hammer Consult",
+    "statement": "Tecnología, gestión e innovación trabajando en conjunto.",
+    "benefit1": "Respaldo regional",
+    "benefit2": "Experiencia en gestión pública",
+    "benefit3": "Proyectos de mayor alcance",
+    "cta": "Hablemos sobre tu proyecto",
+    "visualBadge": "Alianza estratégica",
+    "surlogicAlt": "Logo SurLogic",
+    "hammerAlt": "Logo Hammer Consult",
+    "hammerLinkLabel": "Visitar sitio web de Hammer Consult"
+  },
   "methodology": {
     "badge": "Proceso",
     "title": "Cómo Trabajamos",
